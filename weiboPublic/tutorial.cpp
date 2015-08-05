@@ -51,7 +51,7 @@ int main(int, char*[]) {
         const Value& a = document["users"]; // Using a reference for consecutive access is handy and faster.
         assert(a.IsArray());
         for (SizeType i = 0; i < a.Size(); i++) // rapidjson uses SizeType instead of size_t.
-            printf("user id&name =%s %s", a[i]["idstr"].GetString(), a[i]["name"].GetString()  ); 
+            printf("user id&name =%s %s\n", a[i]["idstr"].GetString(), a[i]["name"].GetString()  ); 
 #if 0
         
         int y = a[0].GetInt();
