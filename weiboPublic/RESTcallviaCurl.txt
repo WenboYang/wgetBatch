@@ -1,0 +1,7 @@
+http://stackoverflow.com/questions/7172784/how-to-post-json-data-with-curl-from-terminal-commandline-to-test-spring-rest
+
+http://www.codingpedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/
+
+https://msdn.microsoft.com/en-us/library/jj950081.aspx
+
+https://www.drupal.org/node/1795770
