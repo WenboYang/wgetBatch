@@ -23,11 +23,7 @@ int main(int, char*[]) {
     ////////////////////////////////////////////////////////////////////////////
     // 1. Parse a JSON text string to a document.
 
-    const char json[] = " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, \"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
-    printf("Original JSON:\n %s\n", json);
-
     Document document;  // Default template parameter uses UTF8 and MemoryPoolAllocator.
-
 #if 1
     // "normal" parsing, decode strings to new buffers. Can use other input stream via ParseStream().
     if (document.ParseStream(is).HasParseError())
@@ -40,18 +36,18 @@ int main(int, char*[]) {
         return 1;
 #endif
 
-    printf("\nParsing to document succeeded.\n");
+ //   printf("\nParsing to document succeeded.\n");
 
     ////////////////////////////////////////////////////////////////////////////
     // 2. Access values in document. 
 
-    printf("\nAccess values in document:\n");
+ //   printf("\nAccess values in document:\n");
     assert(document.IsObject());    // Document is a JSON value represents the root of DOM. Root can be either an object or array.
     {
         const Value& a = document["users"]; // Using a reference for consecutive access is handy and faster.
         assert(a.IsArray());
         for (SizeType i = 0; i < a.Size(); i++) // rapidjson uses SizeType instead of size_t.
-            printf("user id&name =%s %s", a[i]["idstr"].GetString(), a[i]["name"].GetString()  ); 
+            printf("%s,%s\n", a[i]["idstr"].GetString(), a[i]["name"].GetString()  ); 
 #if 0
         
         int y = a[0].GetInt();
