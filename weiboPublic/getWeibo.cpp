@@ -31,9 +31,11 @@ std::string exec( const char* cmd) {
 
 int main( int argc, char* argv[] )
 {
-   string headerStr = " -H \"Host: weibo.cn\" -H \"User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\" -H \"Accept-Language: en-US,en;q=0.5\" --compressed -H \"Cookie: _T_WM=c441fc2c51af767ad88196baaf0b5b50; SUB=_2A254uFUyDeTxGedH7VEQ8SjNyT6IHXVYQ3t6rDV6PUJbrdAKLUbHkW1y0hARN9bEpS63INZuhhaBsLyzBA..; gsid_CTandWM=4uLS3cf01PT4zMVj1rfuY8eHa1Y\" -H \"Connection: keep-alive\"";
- 
-   string htmlheaderStr = "<!--?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?--> \
+
+	string headerStr = " -H 'Host: weibo.cn' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Cookie: _T_WM=6f3fd2b26419adb415239be761de9abb; SUB=_2A254wEvoDeTxGedH7VEQ8SjNyT6IHXVYS1WgrDV6PUJbrdANLUnAkW2S6tPrVhCM9X1GLtU3vsZtkqtv0A..; gsid_CTandWM=4uth6b8919bdu4Mcd6e4m8eHa1Y' -H 'Connection: keep-alive'";
+
+
+	string htmlheaderStr = "<!--?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?--> \
 <html xmlns=\"http://www.w3.org/1999/xhtml\"> \
  <head> \
   <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"> \
