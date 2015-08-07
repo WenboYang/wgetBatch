@@ -1,0 +1,238 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Sina, Weibo, API, test -->
+<title>Sina Weibo API Test Page</title>
+<link rel="stylesheet" type="text/css" href="Sina%20Weibo%20API%20Guide_files/myhomepage.html">
+
+<style type="text/css">body {background-image:url(images/background.jpg);background-attachment:fixed;}.bkgspc {margin-top:10px;font-size:11px;font-family:Arial;}.bkgspc </style></head>
+
+<body>
+  
+<br> Congratz! By now you should have the App Key, App Secret and an 
+Redirect URI. This is all you need to start using the Weibo API.
+
+<a href="#shortcuts" align="center">Go back to the top</a>
+</div></div></div></blockquote>
+</div>
+
+<div id="clientapi">
+<hr>
+<h2> 3 - Using the Client API</h2>
+<br>In this section, we will show examples of the main functionalities 
+of the API. The API itself has too many functionalities to describe them
+ one by one, so we will only focus on the most important ones, such as 
+authenticating to obtain a <b>secret key</b>.
+
+<blockquote>
+
+<div id="3-1"><p>
+<font size="4"><b>3-1 - About the API </b></font>
+<br>The Weibo API is implemented as a series of Restful Web Services. To
+ call a given service, you need to know the uri location of the 
+service(Ex:"<a href="http://api.t.sina.com.cn/statuses/user_timeline.json">http://api.t.sina.com.cn/statuses/user_timeline.json</a>")
+ and the parameters. The server will reply with a JSON format message. 
+The list of services, input parameters and output parameters are 
+specified in the <a href="http://open.weibo.com/wiki/API%E6%96%87%E6%A1%A3/en">documentation</a>.
+
+<br> Luckily, there are many client wrappers that allow you to abstract 
+from the details of the communication between the client and server. 
+These can be found <a href="http://open.weibo.com/wiki/SDK/en">here</a>.
+
+</p><div id="3-1"><p>
+<font size="4"><b>3-2 - Authentication </b></font>
+The first service that you will need to call is the authentication service in order to get an <b>Access Token</b>. This is done in 2 steps.
+<br>
+First, you need to get an authentication code using the service described <a href="http://open.weibo.com/wiki/2/oauth2/authorize/en">here</a>. 
+The service is located at <a href="https://api.weibo.com/oauth2/authorize">https://api.weibo.com/oauth2/authorize</a>
+and the parameters are:
+</p><ul>
+<li>client_id - your app key
+</li><li>redirect_uri - your redirect URI
+</li><li>response_type - response type (should be code)
+</li></ul> 
+
+<br>
+For your convenience, you can test this using the form below. You can 
+use the default parameters of the account we created for this guide, 
+although, I encourage you to test it using your own account. 
+<br>Note:This will open a new window.
+<div style="border: 1px solid; padding: 5px">
+<form action="https://api.weibo.com/oauth2/authorize" method="get" target="_blank">
+client_id: <input name="client_id" id="appkey" value="530271774" type="text"><br>
+redirect_uri: <input name="redirect_uri" id="reduri" value="https://github.com/wlin12" type="text"><br>
+response_type: <input name="response_type" id="responsetype" value="code" type="text"><br>
+<input value="Submit" type="submit">
+</form> 
+</div>
+
+<br> After sending the message, you should see the authentication window below. To authorize, click on the red button(授权=authorize).
+<br><img src="Sina%20Weibo%20API%20Guide_files/3-2authenticate.png"><p></p>
+
+<br> You should be redirected to your redirect URI. The authentication 
+code can be found in the url itself as the parameter "code". In our 
+case, we were redirected to <a href="https://github.com/wlin12?code=387f5b11fe2503e45b41addd4bdb5d52">"https://github.com/wlin12?code=387f5b11fe2503e45b41addd4bdb5d52"</a>. Thus, our authentication code is 387f5b11fe2503e45b41addd4bdb5d52. 
+<br><img src="Sina%20Weibo%20API%20Guide_files/3-2code.png"><p></p>
+
+<br>With this code, you can get an access token using the service described in <a href="http://open.weibo.com/wiki/2/oauth2/access_token/en">here</a>. This service is located at <a href="https://api.weibo.com/oauth2/access_token">https://api.weibo.com/oauth2/access_token</a> and the parameters we need to use are:
+<ul>
+<li>client_id - your app key
+</li><li>client_secret - your app secret
+</li><li>redirect_uri - your redirect URI
+</li><li>grant_type - the type of request, which is set to "authorization_code".
+</li><li>code - the code you obtained in the first step
+</li></ul> 
+
+<br>Once more, you can try this using the following form:
+<br>Note:This will open a new window.
+<div style="border: 1px solid; padding: 5px">
+<form action="https://api.weibo.com/oauth2/access_token" method="post" target="_blank">
+client_id: <input name="client_id" id="appkey" value="530271774" type="text"><br>
+client_secret: <input name="client_secret" id="appsecret" value="172d83f3a8c8e09f7185eec148b02ce8" type="text"><br>
+redirect_uri: <input name="redirect_uri" id="reduri" value="https://github.com/wlin12" type="text"><br>
+grant_type: <input name="grant_type" id="granttype" value="authorization_code" type="text"><br>
+code: <input name="code" id="code" value="387f5b11fe2503e45b41addd4bdb5d52" type="text"><br>
+<input value="Submit" type="submit">
+</form> 
+</div>
+
+<br> This should open a window, with the following JSON message:
+<br> <br> {"access_token":"2.00xusAWD0YuxsZ10f9689fa7sIoHJC","remind_in":"157679999","expires_in":157679999,"uid":"3221452355"}
+<br> <br> The access token here would be 
+2.00xusAWD0YuxsZ10f9689fa7sIoHJC, so congratz! You are officially 
+authenticated. From our experience, this token lasts a long long time, 
+since we haven't authenticated for months.
+
+<br><br>For more details, the authentication process is described <a href="http://open.weibo.com/wiki/OAuth/en">here</a>.
+
+<div id="3-1"><p>
+<font size="4"><b>3-3 - Usage Examples </b></font>
+<br>By now, you should be a pro using the API, so we will just show some examples using the API.
+
+<br> First, we will use the public timeline service which retrieves posts in the public domain. We can do this using the service in <a href="http://open.weibo.com/wiki/2/statuses/public_timeline/en">http://open.weibo.com/wiki/2/statuses/public_timeline/en</a>. The url is <a href="https://api.weibo.com/2/statuses/public_timeline.json">https://api.weibo.com/2/statuses/public_timeline.json</a> and the parameters are:
+
+</p><ul>
+<li>client_id - your app key
+</li><li>access_token - access token obtained after authenticating
+</li><li>page - page number of the results
+</li></ul> 
+
+<div style="border: 1px solid; padding: 5px">
+<form action="https://api.weibo.com/2/statuses/public_timeline.json" method="get" target="_blank">
+client_id: <input name="client_id" id="appkey" value="530271774" type="text"><br>
+access_token: <input name="access_token" id="access_token" value="2.00xusAWD0YuxsZ10f9689fa7sIoHJC" type="text"><br>
+page: <input name="page" id="page" value="1" type="text"><br>
+<input value="Submit" type="submit">
+</form> 
+</div>
+
+<br> The server will respond with a JSON message with the messages, or 
+return an error message describing what went wrong (Ex: if your page 
+number is too large).
+<br> One important note is that Weibo rate limits accounts so that only 
+150 requests can be made per hour. Thus, you might get an 403 error due 
+to rate limiting. 
+<br><b>So, please do not use my account information in your web application!</b>
+
+<br><br>Next, we use show another service, which returns a list of hot posts in a given category. This is described <a href="http://open.weibo.com/wiki/2/suggestions/users/hot">here</a>. The url is <a href="https://api.weibo.com/2/suggestions/users/hot.json">https://api.weibo.com/2/suggestions/users/hot.json</a> and the parameters are:
+
+<ul>
+<li>client_id - your app key
+</li><li>access_token - access token obtained after authenticating
+</li><li>category - possible categories: <br>DEFAULT,ENT,MUSIC,FASHION,LITERATURE,
+<br>BUSINESS,SPORT,SPORTS,HEALTH,AUTO,
+<br>HOUSE,TRIP,STOCK,FOOD,FATE,ART,TECH,
+<br>CARTOON,GAMES,MEDIUM,MARKETER
+</li></ul> 
+
+<div style="border: 1px solid; padding: 5px">
+<form action="https://api.weibo.com/2/suggestions/users/hot.json" method="get" target="_blank">
+client_id: <input name="client_id" id="appkey" value="530271774" type="text"><br>
+access_token: <input name="access_token" id="access_token" value="2.00xusAWD0YuxsZ10f9689fa7sIoHJC" type="text"><br>
+category: <input name="category" id="category" value="FOOD" type="text"><br>
+<input value="Submit" type="submit">
+</form> 
+</div>
+
+This should return a JSON message with the top users of the chosen category and their latest message.
+
+<br> Finally, we will try to return a list of comments for a given post. This is described <a href="http://open.weibo.com/wiki/2/comments/show">here</a>. The url is <a href="https://api.weibo.com/2/comments/show.json">https://api.weibo.com/2/suggestions/users/hot.json</a> and the parameters are:
+
+<ul>
+<li>source - your app key
+</li><li>access_token - access token obtained after authenticating
+</li><li>id - weibo post id
+</li><li>count - number of comments per page
+</li><li>page - page number
+</li></ul> 
+
+<div style="border: 1px solid; padding: 5px">
+<form action="https://api.weibo.com/2/comments/show.json" method="get" target="_blank">
+source: <input name="source" id="appkey" value="530271774" type="text"><br>
+access_token: <input name="access_token" id="access_token" value="2.00xusAWD0YuxsZ10f9689fa7sIoHJC" type="text"><br>
+id: <input name="id" id="id" value="3528359722080601" type="text"><br>
+count: <input name="count" id="count" value="50" type="text"><br>
+page: <input name="page" id="page" value="1" type="text"><br>
+<input value="Submit" type="submit">
+</form> 
+</div>
+
+This should return a JSON message with the a list of comments to the post.
+
+<br>
+Here are some more random examples:
+<br>
+<b>User Timeline:</b>
+<div style="border: 1px solid; padding: 5px">
+<form action="https://api.weibo.com/2/statuses/user_timeline.json" method="get" target="_blank">
+source: <input name="source" id="appkey" value="530271774" type="text"><br>
+access_token: <input name="access_token" id="access_token" value="2.00xusAWD0YuxsZ10f9689fa7sIoHJC" type="text"><br>
+id: <input name="uid" id="uid" value="1741514817" type="text"><br>
+count: <input name="count" id="count" value="50" type="text"><br>
+page: <input name="page" id="page" value="1" type="text"><br>
+<input value="Submit" type="submit">
+</form> 
+</div>
+
+<br>
+<b>User Timeline:</b>
+<div style="border: 1px solid; padding: 5px">
+<form action="https://api.weibo.com/2/statuses/user_timeline/ids.json" method="get" target="_blank">
+source: <input name="source" id="appkey" value="530271774" type="text"><br>
+access_token: <input name="access_token" id="access_token" value="2.00xusAWD0YuxsZ10f9689fa7sIoHJC" type="text"><br>
+id: <input name="uid" id="uid" value="1741514817" type="text"><br>
+count: <input name="count" id="count" value="50" type="text"><br>
+page: <input name="page" id="page" value="1" type="text"><br>
+<input value="Submit" type="submit">
+</form> 
+</div>
+
+
+<br>
+<b>Timeline Batch:</b>
+<div style="border: 1px solid; padding: 5px">
+<form action="https://api.weibo.com/2/statuses/timeline_batch.json" method="get" target="_blank">
+source: <input name="source" id="appkey" value="530271774" type="text"><br>
+access_token: <input name="access_token" id="access_token" value="2.00xusAWD0YuxsZ10f9689fa7sIoHJC" type="text"><br>
+id: <input name="uids" id="uids" value="1741514817" type="text"><br>
+count: <input name="count" id="count" value="50" type="text"><br>
+page: <input name="page" id="page" value="1" type="text"><br>
+<input value="Submit" type="submit">
+</form> 
+</div>
+
+
+</div></div></div></blockquote>
+
+<hr>
+
+<br><br> This ends our guide. We hope it was helpful.
+
+<br> If you have any questions feel free to contact us (<a href="http://www.cs.cmu.edu/%7Elingwang/">Wang Ling</a> or <a href="http://www.cs.cmu.edu/%7Eguangx/">Guang Xiang</a>).
+
+<br><a href="#shortcuts" align="center">Go back to the top</a>
+
+</div>
+
+
+
+</body></html>
