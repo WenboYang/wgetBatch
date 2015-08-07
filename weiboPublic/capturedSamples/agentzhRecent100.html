@@ -1,0 +1,4431 @@
+<!--?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?--> <html xmlns="http://www.w3.org/1999/xhtml">  <head>   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">   <meta http-equiv="Cache-Control" content="no-cache">   <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=2.0">   <link rel="icon" sizes="any" mask="" href="http://h5.sinaimg.cn/upload/2015/05/15/28/WeiboLogoCh.svg">   <meta name="theme-color" content="black">   <meta name="MobileOptimized" content="240">   <style type="text/css" id="internalStyle">    html,body,p,form,div,table,textarea,input,span,select{font-size:12px;word-wrap:break-word;}body{background:#F8F9F9;color:#000;padding:1px;margin:1px;}table,tr,td{border-width:0px;margin:0px;padding:0px;}form{margin:0px;padding:0px;border:0px;}textarea{border:1px solid #96c1e6}textarea{width:95%;}a,.tl{color:#2a5492;text-decoration:underline;}/*a:link {color:#023298}*/.k{color:#2a5492;text-decoration:underline;}.kt{color:#F00;}.ib{border:1px solid #C1C1C1;}.pm,.pmy{clear:both;background:#ffffff;color:#676566;border:1px solid #b1cee7;padding:3px;margin:2px 1px;overflow:hidden;}.pms{clear:both;background:#c8d9f3;color:#666666;padding:3px;margin:0 1px;overflow:hidden;}.pmst{margin-top: 5px;}.pmsl{clear:both;padding:3px;margin:0 1px;overflow:hidden;}.pmy{background:#DADADA;border:1px solid #F8F8F8;}.t{padding:0px;margin:0px;height:35px;}.b{background:#e3efff;text-align:center;color:#2a5492;clear:both;padding:4px;}.bl{color:#2a5492;}.n{clear:both;background:#436193;color:#FFF;padding:4px; margin: 1px;}.nt{color:#b9e7ff;}.nl{color:#FFF;text-decoration:none;}.nfw{clear:both;border:1px solid #BACDEB;padding:3px;margin:2px 1px;}.s{border-bottom:1px dotted #666666;margin:3px;clear:both;}.tip{clear:both; background:#c8d9f3;color:#676566;border:1px solid #BACDEB;padding:3px;margin:2px 1px;}.tip2{color:#000000;padding:2px 3px;clear:both;}.ps{clear:both;background:#FFF;color:#676566;border:1px solid #BACDEB;padding:3px;margin:2px 1px;}.tm{background:#feffe5;border:1px solid #e6de8d;padding:4px;}.tm a{color:#ba8300;}.tmn{color:#f00}.tk{color:#ffffff}.tc{color:#63676A;}.c{padding:2px 5px;}.c div a img{border:1px solid #C1C1C1;}.ct{color:#9d9d9d;font-style:italic;}.cmt{color:#9d9d9d;}.ctt{color:#000;}.cc{color:#2a5492;}.nk{color:#2a5492;}.por {border: 1px solid #CCCCCC;height:50px;width:50px;}.me{color:#000000;background:#FEDFDF;padding:2px 5px;}.pa{padding:2px 4px;}.nm{margin:10px 5px;padding:2px;}.hm{padding:5px;background:#FFF;color:#63676A;}.u{margin:2px 1px;background:#ffffff;border:1px solid #b1cee7;}.ut{padding:2px 3px;}.cd{text-align:center;}.r{color:#F00;}.g{color:#0F0;}.bn{background: transparent;border: 0 none;text-align: left;padding-left: 0;}   </style>  </head> <body> <div class="c" id="M_CuCrlxWwF"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   刚刚花费了很多笔墨向 PCRE JIT 的作者 Zoltan 老师讲解了我的支持子匹配捕获的 DFA 算法。和 Zoltan 老师交流一直非常投缘，有一种奇妙的惺惺相惜的感觉。和自己敬仰的大牛进行比较深入的沟通和交流是一种莫大的享受，即使从未谋面。
+  </span>
+  <a href="http://weibo.cn/attitude/CuCrlxWwF/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[35]
+  </a>
+  <a href="http://weibo.cn/repost/CuCrlxWwF?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CuCrlxWwF?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CuCrlxWwF?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   08月06日 22:55 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CuCdW4IeY"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   今晚回邮件回到手抽筋。有一封邮件用中文写了一半，然后贴了一大段示例代码，结果忘了当前语言，用英文写完了下一半，我汗。
+  </span>
+  <a href="http://weibo.cn/attitude/CuCdW4IeY/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[20]
+  </a>
+  <a href="http://weibo.cn/repost/CuCdW4IeY?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/CuCdW4IeY?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[6]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CuCdW4IeY?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   08月06日 22:22 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CtFZf2tup"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   OpenResty 1.9.3.1 RC1 刚刚发布供社区试用和测试。下载地址是：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLpQp8W&amp;ep=CtFZf2tup%2C1834459124%2CCtFDakOXe%2C1834459124">
+    http://t.cn/RLpQp8W
+   </a>
+   发布公告在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLpQp8O&amp;ep=CtFZf2tup%2C1834459124%2CCtFDakOXe%2C1834459124">
+    http://t.cn/RLpQp8O
+   </a>
+   欢迎大家反馈问题！这是第一个基于 nginx 1.9.x 核心的 OpenResty 发布，从而我们可以享受到最新的 nginx 1.9.x 的所有新功能。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CtFDakOXe?rl=0">
+   <img src="http://ww1.sinaimg.cn/wap180/6d579ff4gw1eum2mzgj89j20dw0513yy.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CtFDakOXe&amp;u=6d579ff4gw1eum2mzgj89j20dw0513yy">
+   原图
+  </a>
+  <span class="cmt">
+   赞[17]
+  </span>
+  <span class="cmt">
+   原文转发[24]
+  </span>
+  <a href="http://weibo.cn/comment/CtFDakOXe?rl=0#cmtfrm" class="cc">
+   原文评论[3]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  //
+  <a href="/n/%E5%B9%B3%E5%87%A1%E7%9A%84%E9%A6%99%E8%8D%89">
+   @平凡的香草
+  </a>
+  :近期我们正在考虑发布基于nginx_lua的一个小作品，希望能够满足大家对于动态反向代理的需求 //
+  <a href="/n/%E5%BC%80%E6%BA%90%E4%B8%AD%E5%9B%BD">
+   @开源中国
+  </a>
+  : [赞][赞][赞] Sourcelair 也开始用 OpenResty 了，Ceryx 是 Sourcelair 出品的，基于 NGINX OpenResty 的动态反向代理。
+  <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRL9HiIA&amp;ep=CtFZf2tup%2C1834459124%2CCtFZf2tup%2C1834459124">
+   http://t.cn/RL9HiIA
+  </a>
+  <a href="http://weibo.cn/attitude/CtFZf2tup/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/CtFZf2tup?uid=1834459124&amp;rl=0">
+   转发[7]
+  </a>
+  <a href="http://weibo.cn/comment/CtFZf2tup?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CtFZf2tup?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月31日 18:06 来自
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Fdown.sina.cn%2Fsinaclient%2Fweibo%2Findex%2Fgsid%2F0%2Fmid%2F0">
+    iPhone客户端
+   </a>
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CtFDakOXe"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   OpenResty 1.9.3.1 RC1 刚刚发布供社区试用和测试。下载地址是：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLpQp8W&amp;ep=CtFDakOXe%2C1834459124%2CCtFDakOXe%2C1834459124">
+    http://t.cn/RLpQp8W
+   </a>
+   发布公告在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLpQp8O&amp;ep=CtFDakOXe%2C1834459124%2CCtFDakOXe%2C1834459124">
+    http://t.cn/RLpQp8O
+   </a>
+   欢迎大家反馈问题！这是第一个基于 nginx 1.9.x 核心的 OpenResty 发布，从而我们可以享受到最新的 nginx 1.9.x 的所有新功能。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CtFDakOXe?rl=0">
+   <img src="http://ww1.sinaimg.cn/wap180/6d579ff4gw1eum2mzgj89j20dw0513yy.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CtFDakOXe&amp;u=6d579ff4gw1eum2mzgj89j20dw0513yy">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CtFDakOXe/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[17]
+  </a>
+  <a href="http://weibo.cn/repost/CtFDakOXe?uid=1834459124&amp;rl=0">
+   转发[24]
+  </a>
+  <a href="http://weibo.cn/comment/CtFDakOXe?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[3]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CtFDakOXe?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月31日 17:12 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CtEjk7DNi"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   现在看到的每一大类的正则算法都有自己的软肋。回溯算法对输入敏感，很容易触发指数级别的病态行为，轻则崩掉，重则耗尽 CPU；同时回溯无法实现流式处理。NFA 仿真算法虽然保证 O(n+m)线性效率，但绝对的平均性能很差。DFA 算法绝对性能好，同时线性的时间复杂度，但空间上在最坏情况下却会指数爆炸。
+  </span>
+  <span class="cmt">
+   赞[8]
+  </span>
+  <span class="cmt">
+   原文转发[16]
+  </span>
+  <a href="http://weibo.cn/comment/CsS9qFvyL?rl=0#cmtfrm" class="cc">
+   原文评论[5]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  幸运的是，DFA 算法只对正则本身敏感，而正则一旦编译完成，便对输入不敏感了。不像传统的回溯算法，对输入极为敏感，快起来很快，慢起来极慢，难于规避指数级别的最坏时间复杂度（只要正则里面用了 * 这样的运算符）。从这个意义上讲，前者更适合使用编译器领域的技术和方法，同时也更有前途一些。
+  <a href="http://weibo.cn/attitude/CtEjk7DNi/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[3]
+  </a>
+  <a href="http://weibo.cn/repost/CtEjk7DNi?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CtEjk7DNi?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CtEjk7DNi?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月31日 13:50 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cto0vyCUD"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   对于我的 sregex DFA 引擎原型生成的很大的 C 输出，clang 3.5.0 的编译速度明显慢于 gcc 5.1.1. 同一个 30MB 的 C 函数，前者使用 -O1 优化选项还要 13 个多小时，而后者使用 -O3 也只需 40 分钟。clang 貌似把大部分时间都花在 register coalescer 上面，而 gcc 大部分时间都在算 dominance frontier
+  </span>
+  <span class="cmt">
+   赞[9]
+  </span>
+  <span class="cmt">
+   原文转发[8]
+  </span>
+  <a href="http://weibo.cn/comment/CsbgL7F2W?rl=0#cmtfrm" class="cc">
+   原文评论[3]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  对于这样的超大例子，gcc 5.1.1 生成的目标代码也比 clang 3.5.0 快一二倍，可谓“又快又好”啊，呵呵。当然，等我后面实现了所谓的“Counting FA”（即“计数有穷自动机”）以后，这样的由 {N} 和 {M,N} 正则记法触发的超大例子就不复存在了。
+  <a href="http://weibo.cn/attitude/Cto0vyCUD/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[8]
+  </a>
+  <a href="http://weibo.cn/repost/Cto0vyCUD?uid=1834459124&amp;rl=0">
+   转发[6]
+  </a>
+  <a href="http://weibo.cn/comment/Cto0vyCUD?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cto0vyCUD?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月29日 20:20 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CtcaSrNlC"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   SourceLair 紧跟 GitHub 之后也开始拥抱 OpenResty
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLK3Cxc&amp;ep=CtcaSrNlC%2C1834459124%2CCtcaSrNlC%2C1834459124">
+    http://t.cn/RLK3Cxc
+   </a>
+   切换到 OpenResty 之后，他们看到了显著的性能提升，引用原文是：“great improvement in the speed of our reverse proxy and a big reduction in the times a user would see the hibernated server page”。
+  </span>
+  <a href="http://weibo.cn/attitude/CtcaSrNlC/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[19]
+  </a>
+  <a href="http://weibo.cn/repost/CtcaSrNlC?uid=1834459124&amp;rl=0">
+   转发[5]
+  </a>
+  <a href="http://weibo.cn/comment/CtcaSrNlC?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[3]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CtcaSrNlC?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月28日 14:12 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Ct3QDlJb5"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   Becchi 和 Crowley 的论文让我有醍醐灌顶之感。他们不仅落实和验证了我之前的计数状态机的模糊设想（从而克服了 DFA 最惧怕的大字符区间的计数约束），同时还展示了只要状态机支持子匹配捕获，就能轻松地实现 DFA/NFA 引擎一直逃避的 backreference 特性（即 \1, \2 这种东西）。re.pl 的春天要来了。
+  </span>
+  <span class="cmt">
+   赞[8]
+  </span>
+  <span class="cmt">
+   原文转发[12]
+  </span>
+  <a href="http://weibo.cn/comment/Ct3PalUry?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  他们的论文全文在这里（PDF 格式）：
+  <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLo1mXG&amp;ep=Ct3QDlJb5%2C1834459124%2CCt3QDlJb5%2C1834459124">
+   http://t.cn/RLo1mXG
+  </a>
+  下面几天我就要开始着手在我的 sregex DFA 原型，re.pl 中实现这些算法。很期待看到最终的效果，嘿嘿。话说连 RE2 也没有实现 backreference :) 这里可以搞的名堂真的很多呀。
+  <a href="http://weibo.cn/attitude/Ct3QDlJb5/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[8]
+  </a>
+  <a href="http://weibo.cn/repost/Ct3QDlJb5?uid=1834459124&amp;rl=0">
+   转发[10]
+  </a>
+  <a href="http://weibo.cn/comment/Ct3QDlJb5?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Ct3QDlJb5?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月27日 17:01 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Ct3PalUry"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   Becchi 和 Crowley 的论文让我有醍醐灌顶之感。他们不仅落实和验证了我之前的计数状态机的模糊设想（从而克服了 DFA 最惧怕的大字符区间的计数约束），同时还展示了只要状态机支持子匹配捕获，就能轻松地实现 DFA/NFA 引擎一直逃避的 backreference 特性（即 \1, \2 这种东西）。re.pl 的春天要来了。
+  </span>
+  <a href="http://weibo.cn/attitude/Ct3PalUry/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[8]
+  </a>
+  <a href="http://weibo.cn/repost/Ct3PalUry?uid=1834459124&amp;rl=0">
+   转发[12]
+  </a>
+  <a href="http://weibo.cn/comment/Ct3PalUry?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Ct3PalUry?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月27日 16:57 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Ct3LTCEIc"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   回溯引擎害怕疯狂回溯，而 DFA 引擎则害怕大字符区间的计数，比如正则 /a.{32}/。这种类型的正则会触发指数级的 DFA 状态爆炸问题。下面第一张图是 re.pl 为正则 /_.{9}/ 生成的 DFA 示意图，极多的节点和边，美得像分形图案。该正则对应的 C 程序的性能相比其他引擎虽然还不错，但其内存代价大多了。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/Ct3Cu2amQ?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/Ct3Cu2amQ?rl=0">
+   <img src="http://ww1.sinaimg.cn/wap180/6d579ff4gw1euhes69gibj21kw1gue82.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=Ct3Cu2amQ&amp;u=6d579ff4gw1euhes69gibj21kw1gue82">
+   原图
+  </a>
+  <span class="cmt">
+   赞[3]
+  </span>
+  <span class="cmt">
+   原文转发[10]
+  </span>
+  <a href="http://weibo.cn/comment/Ct3Cu2amQ?rl=0#cmtfrm" class="cc">
+   原文评论[18]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  因为这个问题，几天前我自己设想了一种带计数器的 DFA 状态，同时在出边上加条件打标签。结果今天在读 Becchi 和 Crowley 的论文时，发现他们也是这么搞的，当然，他们把所有细节都落实了。这种扩展了的状态机可以很方便地整合到我现有的 DFA 变种中来。这种技术可以避免这一类的 DFA 状态爆炸问题。
+  <a href="http://weibo.cn/attitude/Ct3LTCEIc/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[7]
+  </a>
+  <a href="http://weibo.cn/repost/Ct3LTCEIc?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/Ct3LTCEIc?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Ct3LTCEIc?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月27日 16:49 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_Ct3Cu2amQ"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   回溯引擎害怕疯狂回溯，而 DFA 引擎则害怕大字符区间的计数，比如正则 /a.{32}/。这种类型的正则会触发指数级的 DFA 状态爆炸问题。下面第一张图是 re.pl 为正则 /_.{9}/ 生成的 DFA 示意图，极多的节点和边，美得像分形图案。该正则对应的 C 程序的性能相比其他引擎虽然还不错，但其内存代价大多了。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/Ct3Cu2amQ?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/Ct3Cu2amQ?rl=0">
+   <img src="http://ww1.sinaimg.cn/wap180/6d579ff4gw1euhes69gibj21kw1gue82.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=Ct3Cu2amQ&amp;u=6d579ff4gw1euhes69gibj21kw1gue82">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/Ct3Cu2amQ/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[3]
+  </a>
+  <a href="http://weibo.cn/repost/Ct3Cu2amQ?uid=1834459124&amp;rl=0">
+   转发[10]
+  </a>
+  <a href="http://weibo.cn/comment/Ct3Cu2amQ?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[18]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Ct3Cu2amQ?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月27日 16:26 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsSAGBCDN"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   用一点 Perl 搞了个简单的网页生成器，汇总了我的正则引擎性能测试集的最新测试结果，涵盖了 PCRE 解释器与 JIT 编译器、PCRE2 解释器和 JIT 编译器、Google 的 RE2 以及我的 SRegex DFA 原型 re.pl：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLSSk0H&amp;ep=CsSAGBCDN%2C1834459124%2CCsSAGBCDN%2C1834459124">
+    http://t.cn/RLSSk0H
+   </a>
+   这个网页会经常更新，同时会添加越来越多的用例。希望我的 sregex 越来越快。
+  </span>
+  <a href="http://weibo.cn/attitude/CsSAGBCDN/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[23]
+  </a>
+  <a href="http://weibo.cn/repost/CsSAGBCDN?uid=1834459124&amp;rl=0">
+   转发[25]
+  </a>
+  <a href="http://weibo.cn/comment/CsSAGBCDN?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[5]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsSAGBCDN?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月26日 12:21 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsSjJgIbi"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   RE2 正则库的原作者，Russ Cox 老师撰写的“Implementing Regular Expressions”系列文章这几年对我帮助很大。我的 sregex 库主要就是基于这个系列里描述的思路来搞的。Russ 站在了 Thompson 和 Pike 这些大师的肩膀上，把 NFA 仿真算法及 DFA cach 等方法进行了很好的总结。但也有明显的缺憾和局限。
+  </span>
+  <span class="cmt">
+   赞[6]
+  </span>
+  <span class="cmt">
+   原文转发[5]
+  </span>
+  <a href="http://weibo.cn/comment/CsSi6cgdt?rl=0#cmtfrm" class="cc">
+   原文评论[1]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  主要的缺憾和局限是：1. 对 NFA 仿真算法很差的绝对效率有些故意回避，而倾向于拿对于回溯算法不利的病态例子来进行性能比较。2. 对通过 DFA cache 对 NFA 仿真算法的优化效果讨论不足，其实 RE2 表现好的情形主要都靠 DFA，其真正的 NFA 实现慢得像爬。3. DFA 方法没有扩展到一般的子匹配捕获的情形。
+  <a href="http://weibo.cn/attitude/CsSjJgIbi/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/CsSjJgIbi?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/CsSjJgIbi?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsSjJgIbi?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月26日 11:39 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsSi6cgdt"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   RE2 正则库的原作者，Russ Cox 老师撰写的“Implementing Regular Expressions”系列文章这几年对我帮助很大。我的 sregex 库主要就是基于这个系列里描述的思路来搞的。Russ 站在了 Thompson 和 Pike 这些大师的肩膀上，把 NFA 仿真算法及 DFA cach 等方法进行了很好的总结。但也有明显的缺憾和局限。
+  </span>
+  <a href="http://weibo.cn/attitude/CsSi6cgdt/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[6]
+  </a>
+  <a href="http://weibo.cn/repost/CsSi6cgdt?uid=1834459124&amp;rl=0">
+   转发[5]
+  </a>
+  <a href="http://weibo.cn/comment/CsSi6cgdt?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsSi6cgdt?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月26日 11:35 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsSc7D7Dy"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   现在看到的每一大类的正则算法都有自己的软肋。回溯算法对输入敏感，很容易触发指数级别的病态行为，轻则崩掉，重则耗尽 CPU；同时回溯无法实现流式处理。NFA 仿真算法虽然保证 O(n+m)线性效率，但绝对的平均性能很差。DFA 算法绝对性能好，同时线性的时间复杂度，但空间上在最坏情况下却会指数爆炸。
+  </span>
+  <span class="cmt">
+   赞[8]
+  </span>
+  <span class="cmt">
+   原文转发[16]
+  </span>
+  <a href="http://weibo.cn/comment/CsS9qFvyL?rl=0#cmtfrm" class="cc">
+   原文评论[5]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  从我的 sregex 正则引擎的角度看，DFA 方向貌似最有前途，但需要特别小心状态爆炸的问题，所以下面需要把重点放到各种 DFA 最小化算法和 DFA 压缩算法上面来。学术界在 DFA 及其变种上的研究一直很活跃。出于安全目的的网络包深度分析扫描、基因序列查找、组合计数等等，都需要这个领域的成果。
+  <a href="http://weibo.cn/attitude/CsSc7D7Dy/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[7]
+  </a>
+  <a href="http://weibo.cn/repost/CsSc7D7Dy?uid=1834459124&amp;rl=0">
+   转发[7]
+  </a>
+  <a href="http://weibo.cn/comment/CsSc7D7Dy?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsSc7D7Dy?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月26日 11:21 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsS9qFvyL"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   现在看到的每一大类的正则算法都有自己的软肋。回溯算法对输入敏感，很容易触发指数级别的病态行为，轻则崩掉，重则耗尽 CPU；同时回溯无法实现流式处理。NFA 仿真算法虽然保证 O(n+m)线性效率，但绝对的平均性能很差。DFA 算法绝对性能好，同时线性的时间复杂度，但空间上在最坏情况下却会指数爆炸。
+  </span>
+  <a href="http://weibo.cn/attitude/CsS9qFvyL/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[8]
+  </a>
+  <a href="http://weibo.cn/repost/CsS9qFvyL?uid=1834459124&amp;rl=0">
+   转发[16]
+  </a>
+  <a href="http://weibo.cn/comment/CsS9qFvyL?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[5]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsS9qFvyL?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月26日 11:14 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsS6sjmXE"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   原先我们只是针对单字节的情形使用 memchr() 进行快速搜索，而多字节主要还是依赖编译器生成的 jump table 来弄。今天从 PCRE 正则引擎借用了一下 bitmap 的方式来进行多字节的快速查找。添加了此优化这后，下面两张图中的正则例子，sregex DFA 有了成倍的性能提升，终于基本不输于其他正则引擎了。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CsuVBDFJN?rl=1">
+   组图共4张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CsuVBDFJN?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eud5jz6cqzj20m80dw0u2.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CsuVBDFJN&amp;u=6d579ff4gw1eud5jz6cqzj20m80dw0u2">
+   原图
+  </a>
+  <span class="cmt">
+   赞[10]
+  </span>
+  <span class="cmt">
+   原文转发[8]
+  </span>
+  <a href="http://weibo.cn/comment/CsuVBDFJN?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  在 sregex DFA 原型里实现了一个简单的基于字符区间的“空洞”比例的启发式规则，以自动判定是适合上 jump table 还是 bitmap，效果不错。//
+  <a href="/n/agentzh">
+   @agentzh
+  </a>
+  : 当然，最适合 jump table 的情形使用 jump table 还是要比 bitmap 多字节搜索更高效。比如有些很简单的例子 jump table 可以比 bitmap 方式快一倍。
+  <a href="http://weibo.cn/attitude/CsS6sjmXE/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[1]
+  </a>
+  <a href="http://weibo.cn/repost/CsS6sjmXE?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CsS6sjmXE?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsS6sjmXE?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月26日 11:07 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsS3Xt1EX"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   注意到 ACM 数字图书馆里不少论文也没有全文可供下载，花钱买的 ACM 帐户也就没有那么值了……
+  </span>
+  <span class="cmt">
+   赞[2]
+  </span>
+  <span class="cmt">
+   原文转发[2]
+  </span>
+  <a href="http://weibo.cn/comment/CsDjtCJOY?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  在 ScienceDirect 网站上找到了许多我想看的自动机领域的论文 PDF，它们在 dl.acm.org 上找不到全文。幸好我有现成的 ScienceDirect 的付费帐户。经 briss 自动裁边后放在 Sony Digital Paper 里面看很爽。找论文也不容易啊。
+  <a href="http://weibo.cn/attitude/CsS3Xt1EX/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/CsS3Xt1EX?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CsS3Xt1EX?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsS3Xt1EX?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月26日 11:00 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsDjtCJOY"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   注意到 ACM 数字图书馆里不少论文也没有全文可供下载，花钱买的 ACM 帐户也就没有那么值了……
+  </span>
+  <a href="http://weibo.cn/attitude/CsDjtCJOY/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[2]
+  </a>
+  <a href="http://weibo.cn/repost/CsDjtCJOY?uid=1834459124&amp;rl=0">
+   转发[2]
+  </a>
+  <a href="http://weibo.cn/comment/CsDjtCJOY?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsDjtCJOY?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月24日 21:28 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CszBC3sgs"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   原先我们只是针对单字节的情形使用 memchr() 进行快速搜索，而多字节主要还是依赖编译器生成的 jump table 来弄。今天从 PCRE 正则引擎借用了一下 bitmap 的方式来进行多字节的快速查找。添加了此优化这后，下面两张图中的正则例子，sregex DFA 有了成倍的性能提升，终于基本不输于其他正则引擎了。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CsuVBDFJN?rl=1">
+   组图共4张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CsuVBDFJN?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eud5jz6cqzj20m80dw0u2.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CsuVBDFJN&amp;u=6d579ff4gw1eud5jz6cqzj20m80dw0u2">
+   原图
+  </a>
+  <span class="cmt">
+   赞[10]
+  </span>
+  <span class="cmt">
+   原文转发[8]
+  </span>
+  <a href="http://weibo.cn/comment/CsuVBDFJN?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  当然，最适合 jump table 的情形使用 jump table 还是要比 bitmap 多字节搜索更高效。比如有些很简单的例子 jump table 可以比 bitmap 方式快一倍。这里最重要的是建立启发式的判定规则，根据 key 分布的不同情况采取不同的优化和代码生成策略。我们这里可以借用 clang/gcc 里面的启发规则 :)
+  <a href="http://weibo.cn/attitude/CszBC3sgs/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[6]
+  </a>
+  <a href="http://weibo.cn/repost/CszBC3sgs?uid=1834459124&amp;rl=0">
+   转发[2]
+  </a>
+  <a href="http://weibo.cn/comment/CszBC3sgs?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CszBC3sgs?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月24日 12:01 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_CsuXuo1xz"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   原先我们只是针对单字节的情形使用 memchr() 进行快速搜索，而多字节主要还是依赖编译器生成的 jump table 来弄。今天从 PCRE 正则引擎借用了一下 bitmap 的方式来进行多字节的快速查找。添加了此优化这后，下面两张图中的正则例子，sregex DFA 有了成倍的性能提升，终于基本不输于其他正则引擎了。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CsuVBDFJN?rl=1">
+   组图共4张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CsuVBDFJN?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eud5jz6cqzj20m80dw0u2.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CsuVBDFJN&amp;u=6d579ff4gw1eud5jz6cqzj20m80dw0u2">
+   原图
+  </a>
+  <span class="cmt">
+   赞[10]
+  </span>
+  <span class="cmt">
+   原文转发[8]
+  </span>
+  <a href="http://weibo.cn/comment/CsuVBDFJN?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  下面四个例子都取自 PCRE JIT 的作者 Zoltan 老师维护的正则性能测试集。由于都是在真实的英语文本上进行匹配，所以算是比较正常的样本。当正则有二义性时，sregex DFA 的优势比较明显，而对于无二义性的简单正则，sregex DFA 至少能保证和其他引擎性能差不多。当然，sregex DFA 仍有很多优化需要做。
+  <a href="http://weibo.cn/attitude/CsuXuo1xz/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[7]
+  </a>
+  <a href="http://weibo.cn/repost/CsuXuo1xz?uid=1834459124&amp;rl=0">
+   转发[2]
+  </a>
+  <a href="http://weibo.cn/comment/CsuXuo1xz?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsuXuo1xz?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月24日 00:11 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsuVBDFJN"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   原先我们只是针对单字节的情形使用 memchr() 进行快速搜索，而多字节主要还是依赖编译器生成的 jump table 来弄。今天从 PCRE 正则引擎借用了一下 bitmap 的方式来进行多字节的快速查找。添加了此优化这后，下面两张图中的正则例子，sregex DFA 有了成倍的性能提升，终于基本不输于其他正则引擎了。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CsuVBDFJN?rl=1">
+   组图共4张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CsuVBDFJN?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eud5jz6cqzj20m80dw0u2.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CsuVBDFJN&amp;u=6d579ff4gw1eud5jz6cqzj20m80dw0u2">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CsuVBDFJN/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[10]
+  </a>
+  <a href="http://weibo.cn/repost/CsuVBDFJN?uid=1834459124&amp;rl=0">
+   转发[8]
+  </a>
+  <a href="http://weibo.cn/comment/CsuVBDFJN?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsuVBDFJN?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月24日 00:07 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CskJmg75I"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   刚又给我的 re.pl 生成的 DFA 添加了一种新的分析，即为每个 DFA 状态计算出达到该状态至少需要消耗的输入字符数。下图展示了一个这样的例子（对应正则 /abc/），每个节点里的 ∧= 后面的数就是计算出来的最小消耗数。这个信息可以用于优化那些需要往后看的正则断言，可以在目标代码中去掉一个 branch.
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CskswA7Qv?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eubvgcr0nzj20db0kxwg7.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CskswA7Qv&amp;u=6d579ff4gw1eubvgcr0nzj20db0kxwg7">
+   原图
+  </a>
+  <span class="cmt">
+   赞[6]
+  </span>
+  <span class="cmt">
+   原文转发[3]
+  </span>
+  <a href="http://weibo.cn/comment/CskswA7Qv?rl=0#cmtfrm" class="cc">
+   原文评论[3]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  值得一提的是，这里的算法实现很像传统编译器对输入程序的控制流图（CFG）的分析，即对有向有环图进行反复迭代。只要确保迭代最终可以收敛就好了。基于这种模版，可以对 DFA 进行更多有趣的属性分析。确定了的自动机就是方便分析呀。
+  <a href="http://weibo.cn/attitude/CskJmg75I/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/CskJmg75I?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CskJmg75I?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CskJmg75I?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月22日 22:09 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CskE59WrK"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   前面那个 DFA 状态最小消耗输入字符数的分析所指导的优化，对于先前那个 /\b\w+nn\b/ 正则用例，也有可测量的性能提升（见下面）。现在在我的本上的匹配扫描速度终于可以超过 350MB/s 了，呵呵。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CskE59WrK?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/6d579ff4gw1eubw9mppumj20hs0dwgmt.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CskE59WrK&amp;u=6d579ff4gw1eubw9mppumj20hs0dwgmt">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CskE59WrK/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[6]
+  </a>
+  <a href="http://weibo.cn/repost/CskE59WrK?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CskE59WrK?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CskE59WrK?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月22日 21:56 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CskswA7Qv"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   刚又给我的 re.pl 生成的 DFA 添加了一种新的分析，即为每个 DFA 状态计算出达到该状态至少需要消耗的输入字符数。下图展示了一个这样的例子（对应正则 /abc/），每个节点里的 ∧= 后面的数就是计算出来的最小消耗数。这个信息可以用于优化那些需要往后看的正则断言，可以在目标代码中去掉一个 branch.
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CskswA7Qv?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eubvgcr0nzj20db0kxwg7.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CskswA7Qv&amp;u=6d579ff4gw1eubvgcr0nzj20db0kxwg7">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CskswA7Qv/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[6]
+  </a>
+  <a href="http://weibo.cn/repost/CskswA7Qv?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/CskswA7Qv?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[3]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CskswA7Qv?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月22日 21:28 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CshtqyzKX"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   再接再厉，我又给 sregex DFA 引擎原型添加了个简单的优化，即对于较多分支的情况，在输出的 C 目标代码中使用 switch/case 语句。clang 和 gcc 会把 case 多于或等于 5 的 switch 语句编译为所谓的“jump table”，从而实现 O(1) 的时间开销，同时避免了 branch mis-prediction. 该优化的效果很显著。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrScl2xDf?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrScl2xDf?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu8enfw61gj20hs0dw0tr.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrScl2xDf&amp;u=6d579ff4gw1eu8enfw61gj20hs0dw0tr">
+   原图
+  </a>
+  <span class="cmt">
+   赞[16]
+  </span>
+  <span class="cmt">
+   原文转发[22]
+  </span>
+  <a href="http://weibo.cn/comment/CrScl2xDf?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  好吧，我先前对 re2 的猜测有误；perf top 的分析结果显示 re2 这里其实绝大部分时间花在 re2::DFA::InlinedSearchLoop 函数上，而这个函数的 branch 很多。//
+  <a href="/n/agentzh">
+   @agentzh
+  </a>
+  : RE2 引擎在这一组性能测试中又几乎垫底了。这是因为……在此模式下 RE2 几乎总是退到 NFA 仿真算法，RE2 使用平衡树来匹配字符区间
+  <a href="http://weibo.cn/attitude/CshtqyzKX/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/CshtqyzKX?uid=1834459124&amp;rl=0">
+   转发[0]
+  </a>
+  <a href="http://weibo.cn/comment/CshtqyzKX?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CshtqyzKX?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月22日 13:52 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsgVsApzV"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   刚刚又在所有的 0 宽度断言对应的目标代码片段中去除了一个 branch，现在对于上一条微博中给的那个正则表达式的测试用例，第一名 sregex DFA 与第二名 re2 之间又拉大了差距。要想程序跑的快，就得分支灭的尽 ;) 等未来我再给 DFA 引入更深入的分析算法之后，我们还可以每个 DFA 状态再灭一二个分支。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CsgTb4VxB?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eubfoy74dlj20hs0dwt9v.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CsgTb4VxB&amp;u=6d579ff4gw1eubfoy74dlj20hs0dwt9v">
+   原图
+  </a>
+  <span class="cmt">
+   赞[8]
+  </span>
+  <span class="cmt">
+   原文转发[1]
+  </span>
+  <a href="http://weibo.cn/comment/CsgTb4VxB?rl=0#cmtfrm" class="cc">
+   原文评论[3]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  值得一提的是，下面这组性能测试中，PCRE2 的 JIT 编译器的匹配效率远高于经典的 PCRE JIT. 当然了，这个例子其实来自 PCRE JIT 的作者 Zoltan 老师，所以他一直以来都针对该例子对 PCRE2 进行优化，只不过他最近的优化只进 PCRE2 而不进 PCRE 罢了。
+  <a href="http://weibo.cn/attitude/CsgVsApzV/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/CsgVsApzV?uid=1834459124&amp;rl=0">
+   转发[0]
+  </a>
+  <a href="http://weibo.cn/comment/CsgVsApzV?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsgVsApzV?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月22日 12:28 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsgTb4VxB"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   刚刚又在所有的 0 宽度断言对应的目标代码片段中去除了一个 branch，现在对于上一条微博中给的那个正则表达式的测试用例，第一名 sregex DFA 与第二名 re2 之间又拉大了差距。要想程序跑的快，就得分支灭的尽 ;) 等未来我再给 DFA 引入更深入的分析算法之后，我们还可以每个 DFA 状态再灭一二个分支。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CsgTb4VxB?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eubfoy74dlj20hs0dwt9v.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CsgTb4VxB&amp;u=6d579ff4gw1eubfoy74dlj20hs0dwt9v">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CsgTb4VxB/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[8]
+  </a>
+  <a href="http://weibo.cn/repost/CsgTb4VxB?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CsgTb4VxB?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[3]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsgTb4VxB?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月22日 12:22 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Csce9ecSZ"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   今天把 \b 断言的实现稍微优化了一下，现在我的 DFA 编译器会根据上下文对 \b 断言检查进行化简。比如，如果下个字节总是 \w，则只检查前个字节；类似地，如果前个字节总是 \w，也只检查另一半。另外，使用 switch/case 对 \w 检查进行了改写。这样减少了不少分支，下面这个例子终于比 RE2 还要快了。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/Csce9ecSZ?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1euav3yvebaj20hs0dwwfl.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=Csce9ecSZ&amp;u=6d579ff4gw1euav3yvebaj20hs0dwwfl">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/Csce9ecSZ/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[13]
+  </a>
+  <a href="http://weibo.cn/repost/Csce9ecSZ?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/Csce9ecSZ?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Csce9ecSZ?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月22日 00:30 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CsbgL7F2W"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   对于我的 sregex DFA 引擎原型生成的很大的 C 输出，clang 3.5.0 的编译速度明显慢于 gcc 5.1.1. 同一个 30MB 的 C 函数，前者使用 -O1 优化选项还要 13 个多小时，而后者使用 -O3 也只需 40 分钟。clang 貌似把大部分时间都花在 register coalescer 上面，而 gcc 大部分时间都在算 dominance frontier
+  </span>
+  <a href="http://weibo.cn/attitude/CsbgL7F2W/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[9]
+  </a>
+  <a href="http://weibo.cn/repost/CsbgL7F2W?uid=1834459124&amp;rl=0">
+   转发[8]
+  </a>
+  <a href="http://weibo.cn/comment/CsbgL7F2W?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[3]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CsbgL7F2W?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月21日 22:04 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_CrSm8wg5G"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   再接再厉，我又给 sregex DFA 引擎原型添加了个简单的优化，即对于较多分支的情况，在输出的 C 目标代码中使用 switch/case 语句。clang 和 gcc 会把 case 多于或等于 5 的 switch 语句编译为所谓的“jump table”，从而实现 O(1) 的时间开销，同时避免了 branch mis-prediction. 该优化的效果很显著。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrScl2xDf?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrScl2xDf?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu8enfw61gj20hs0dw0tr.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrScl2xDf&amp;u=6d579ff4gw1eu8enfw61gj20hs0dw0tr">
+   原图
+  </a>
+  <span class="cmt">
+   赞[16]
+  </span>
+  <span class="cmt">
+   原文转发[22]
+  </span>
+  <a href="http://weibo.cn/comment/CrScl2xDf?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  回复
+  <a href="/n/edengundam_%E4%BB%8E%E4%B8%8D%E7%AB%8B%E5%88%83">
+   @edengundam_从不立刃
+  </a>
+  :我是直接用 objdump 看可执行文件的反汇编，还有使用 perf stat 这样的工具取得各种硬件性能统计信息。//
+  <a href="/n/edengundam_%E4%BB%8E%E4%B8%8D%E7%AB%8B%E5%88%83">
+   @edengundam_从不立刃
+  </a>
+  :请问下，一般看完调用栈之后，就不知道应该继续看什么数据来进行深入优化，比如这个跳表的优化，这种信息有什么数据能看到么？谢谢
+  <a href="http://weibo.cn/attitude/CrSm8wg5G/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/CrSm8wg5G?uid=1834459124&amp;rl=0">
+   转发[5]
+  </a>
+  <a href="http://weibo.cn/comment/CrSm8wg5G?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrSm8wg5G?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 21:55 来自
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Fdown.sina.cn%2Fsinaclient%2Fweibo%2Findex%2Fgsid%2F0%2Fmid%2F0">
+    iPhone客户端
+   </a>
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrShJuZbL"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   再接再厉，我又给 sregex DFA 引擎原型添加了个简单的优化，即对于较多分支的情况，在输出的 C 目标代码中使用 switch/case 语句。clang 和 gcc 会把 case 多于或等于 5 的 switch 语句编译为所谓的“jump table”，从而实现 O(1) 的时间开销，同时避免了 branch mis-prediction. 该优化的效果很显著。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrScl2xDf?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrScl2xDf?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu8enfw61gj20hs0dw0tr.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrScl2xDf&amp;u=6d579ff4gw1eu8enfw61gj20hs0dw0tr">
+   原图
+  </a>
+  <span class="cmt">
+   赞[16]
+  </span>
+  <span class="cmt">
+   原文转发[22]
+  </span>
+  <a href="http://weibo.cn/comment/CrScl2xDf?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  Google 的 RE2 引擎在这一组性能测试中又几乎垫底了。这是因为所有这些测试用例都使用的是 submatch capture 模式，而在此模式下 RE2 几乎总是退到 NFA 仿真算法，虽然是 O(n) 的时间复杂度，但却是非常慢的 O(n)，呵呵。另外，RE2 使用平衡树来匹配字符区间，自然没法和 jump table 比了。
+  <a href="http://weibo.cn/attitude/CrShJuZbL/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[3]
+  </a>
+  <a href="http://weibo.cn/repost/CrShJuZbL?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/CrShJuZbL?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[5]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrShJuZbL?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 21:44 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrSe62GIt"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   再接再厉，我又给 sregex DFA 引擎原型添加了个简单的优化，即对于较多分支的情况，在输出的 C 目标代码中使用 switch/case 语句。clang 和 gcc 会把 case 多于或等于 5 的 switch 语句编译为所谓的“jump table”，从而实现 O(1) 的时间开销，同时避免了 branch mis-prediction. 该优化的效果很显著。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrScl2xDf?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrScl2xDf?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu8enfw61gj20hs0dw0tr.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrScl2xDf&amp;u=6d579ff4gw1eu8enfw61gj20hs0dw0tr">
+   原图
+  </a>
+  <span class="cmt">
+   赞[16]
+  </span>
+  <span class="cmt">
+   原文转发[22]
+  </span>
+  <a href="http://weibo.cn/comment/CrScl2xDf?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  如果没有此优化，则对于下面两个简单的分支选择的正则表达式，我的新引擎的效率反而显著低于 PCRE JIT；而一旦开启该优化，则立即反超 PCRE JIT. 我知道 PCRE JIT 吐的机器码充分考虑了 code layout 对 branch 的影响。所以我们这里也不能大意。有趣的是，clang 在这里生成的代码明显比 gcc 效率高。
+  <a href="http://weibo.cn/attitude/CrSe62GIt/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[6]
+  </a>
+  <a href="http://weibo.cn/repost/CrSe62GIt?uid=1834459124&amp;rl=0">
+   转发[8]
+  </a>
+  <a href="http://weibo.cn/comment/CrSe62GIt?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[7]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrSe62GIt?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 21:35 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrScl2xDf"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   再接再厉，我又给 sregex DFA 引擎原型添加了个简单的优化，即对于较多分支的情况，在输出的 C 目标代码中使用 switch/case 语句。clang 和 gcc 会把 case 多于或等于 5 的 switch 语句编译为所谓的“jump table”，从而实现 O(1) 的时间开销，同时避免了 branch mis-prediction. 该优化的效果很显著。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrScl2xDf?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrScl2xDf?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu8enfw61gj20hs0dw0tr.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrScl2xDf&amp;u=6d579ff4gw1eu8enfw61gj20hs0dw0tr">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CrScl2xDf/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[16]
+  </a>
+  <a href="http://weibo.cn/repost/CrScl2xDf?uid=1834459124&amp;rl=0">
+   转发[22]
+  </a>
+  <a href="http://weibo.cn/comment/CrScl2xDf?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrScl2xDf?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 21:31 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrS8ce03y"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   刚刚给我的 sregex DFA 正则引擎的原型实现又添加了个有趣的优化，即针对适用于 memchr() 单字节搜索的 DFA 状态，施用 memchr(). 由于 DFA 的确定性，不仅正则的起始状态可能适用该优化，中间的某些状态也可能适用。比如下图是正则 /d.*d/ 对应的 DFA，其中[1]、[3]、[6]号 DFA 状态都满足优化条件。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrQsdbIXg?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu86zkx55ej20ln0ekdhr.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrQsdbIXg&amp;u=6d579ff4gw1eu86zkx55ej20ln0ekdhr">
+   原图
+  </a>
+  <span class="cmt">
+   赞[1]
+  </span>
+  <span class="cmt">
+   原文转发[6]
+  </span>
+  <a href="http://weibo.cn/comment/CrQsdbIXg?rl=0#cmtfrm" class="cc">
+   原文评论[2]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  极端的例子最能检验算法的效果和实现的正确性。另外从安全的角度看（比如将之用于 Web 防火墙），最有趣的往往是最坏情况。//
+  <a href="/n/HalfAMonk">
+   @HalfAMonk
+  </a>
+  : 这例子也太极端了！//
+  <a href="/n/agentzh">
+   @agentzh
+  </a>
+  :这种优化对于某些特殊输入效果显著。比如用刚才那个正则 /d.*d/ 匹配一个首尾是字母 d 而中间是 10M 个字母 a、b、c 的随机组合
+  <a href="http://weibo.cn/attitude/CrS8ce03y/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[3]
+  </a>
+  <a href="http://weibo.cn/repost/CrS8ce03y?uid=1834459124&amp;rl=0">
+   转发[0]
+  </a>
+  <a href="http://weibo.cn/comment/CrS8ce03y?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrS8ce03y?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 21:21 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrR5zE89E"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   下面三张图是另外三组性能测试结果，都是能适用 memchr 优化的正则例子（使用 gnuplot 自动绘制）。可以看到对于这些例子，sregex DFA 原型完胜了 PCRE 解释器、PCRE JIT 编译器，以及 Google 的 RE2 引擎。我不太明白的是，我分明记得 PCRE 和 RE2 都有 memchr 优化的，但在这些测试中慢得一踏糊涂。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrR5zE89E?rl=1">
+   组图共3张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrR5zE89E?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu89sba315j20hs0dwwfn.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrR5zE89E&amp;u=6d579ff4gw1eu89sba315j20hs0dwwfn">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CrR5zE89E/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[12]
+  </a>
+  <a href="http://weibo.cn/repost/CrR5zE89E?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/CrR5zE89E?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrR5zE89E?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 18:41 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrQuYyITA"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   刚刚给我的 sregex DFA 正则引擎的原型实现又添加了个有趣的优化，即针对适用于 memchr() 单字节搜索的 DFA 状态，施用 memchr(). 由于 DFA 的确定性，不仅正则的起始状态可能适用该优化，中间的某些状态也可能适用。比如下图是正则 /d.*d/ 对应的 DFA，其中[1]、[3]、[6]号 DFA 状态都满足优化条件。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrQsdbIXg?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu86zkx55ej20ln0ekdhr.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrQsdbIXg&amp;u=6d579ff4gw1eu86zkx55ej20ln0ekdhr">
+   原图
+  </a>
+  <span class="cmt">
+   赞[1]
+  </span>
+  <span class="cmt">
+   原文转发[6]
+  </span>
+  <a href="http://weibo.cn/comment/CrQsdbIXg?rl=0#cmtfrm" class="cc">
+   原文评论[2]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  这种优化对于某些特殊输入效果显著。比如用刚才那个正则 /d.*d/ 匹配一个首尾是字母 d 而中间是 10M 个字母 a、b、c 的随机组合，我的新引擎在开启 memchr 优化前后的匹配时间分别是 4.71ms 和 0.95ms. 提升达到近 5x. 不过有些奇怪的是，RE2 号称也有此优化，但在这个例子中巨慢无比，用时达 1.4 秒多
+  <a href="http://weibo.cn/attitude/CrQuYyITA/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/CrQuYyITA?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/CrQuYyITA?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrQuYyITA?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 17:11 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrQsdbIXg"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   刚刚给我的 sregex DFA 正则引擎的原型实现又添加了个有趣的优化，即针对适用于 memchr() 单字节搜索的 DFA 状态，施用 memchr(). 由于 DFA 的确定性，不仅正则的起始状态可能适用该优化，中间的某些状态也可能适用。比如下图是正则 /d.*d/ 对应的 DFA，其中[1]、[3]、[6]号 DFA 状态都满足优化条件。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrQsdbIXg?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1eu86zkx55ej20ln0ekdhr.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrQsdbIXg&amp;u=6d579ff4gw1eu86zkx55ej20ln0ekdhr">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CrQsdbIXg/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[1]
+  </a>
+  <a href="http://weibo.cn/repost/CrQsdbIXg?uid=1834459124&amp;rl=0">
+   转发[6]
+  </a>
+  <a href="http://weibo.cn/comment/CrQsdbIXg?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrQsdbIXg?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 17:04 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrNC6rUQ7"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   今天终于让我的 sregex DFA 引擎的 Perl 原型直接吐完全独立的 C 代码了。它生成的 C 程序通过 gcc 优化编译生成二进制程序后，可以独立地执行正则匹配任务。我拿正则表达式 /(a|b)aa(aa|bb)cc(a|b)/ 对一个 5.1MB 的大字符串进行匹配，同时与 PCRE 和 RE2 这些正则引擎进行性能比较，还是非常乐观的。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrJWSA18B?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrJWSA18B?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eu7e9fzgcej20fa0hijsf.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrJWSA18B&amp;u=6d579ff4gw1eu7e9fzgcej20fa0hijsf">
+   原图
+  </a>
+  <span class="cmt">
+   赞[35]
+  </span>
+  <span class="cmt">
+   原文转发[14]
+  </span>
+  <a href="http://weibo.cn/comment/CrJWSA18B?rl=0#cmtfrm" class="cc">
+   原文评论[5]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  这个吐 C 代码的 re.pl 原型实现同时还引入了 DFA 边的优化排序，同时对于 DFA 边构成字符全集的情形，最后一条 DFA 边在目标代码中不再做条件测试。这些优化的效果很明显。目前 re.pl 的代码量增加到 1487 行（除去空行和注释）。gcc/clang 生成的警告也能指示出我的 DFA 中一些冗余和不一致的地方。
+  <a href="http://weibo.cn/attitude/CrNC6rUQ7/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[8]
+  </a>
+  <a href="http://weibo.cn/repost/CrNC6rUQ7?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CrNC6rUQ7?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrNC6rUQ7?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 09:51 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrK2LuLjO"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   今天终于让我的 sregex DFA 引擎的 Perl 原型直接吐完全独立的 C 代码了。它生成的 C 程序通过 gcc 优化编译生成二进制程序后，可以独立地执行正则匹配任务。我拿正则表达式 /(a|b)aa(aa|bb)cc(a|b)/ 对一个 5.1MB 的大字符串进行匹配，同时与 PCRE 和 RE2 这些正则引擎进行性能比较，还是非常乐观的。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrJWSA18B?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrJWSA18B?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eu7e9fzgcej20fa0hijsf.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrJWSA18B&amp;u=6d579ff4gw1eu7e9fzgcej20fa0hijsf">
+   原图
+  </a>
+  <span class="cmt">
+   赞[35]
+  </span>
+  <span class="cmt">
+   原文转发[14]
+  </span>
+  <a href="http://weibo.cn/comment/CrJWSA18B?rl=0#cmtfrm" class="cc">
+   原文评论[5]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  当然，最终 sregex 的 DFA 引擎将不会依赖于 gcc 这样的外部编译器工具链，而是内建各种传统优化编证器里的优化算法，然后直接在内存里生成机器代码（类似 JIT 编译器）。所以这里借用 gcc 进行优化，结果可能会比最终的效果略好一些。值得一提的是，我们还尚未进行 DFA 最小化之类的高层面优化呢。
+  <a href="http://weibo.cn/attitude/CrK2LuLjO/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[14]
+  </a>
+  <a href="http://weibo.cn/repost/CrK2LuLjO?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/CrK2LuLjO?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrK2LuLjO?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 00:45 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_CrJWSA18B"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   今天终于让我的 sregex DFA 引擎的 Perl 原型直接吐完全独立的 C 代码了。它生成的 C 程序通过 gcc 优化编译生成二进制程序后，可以独立地执行正则匹配任务。我拿正则表达式 /(a|b)aa(aa|bb)cc(a|b)/ 对一个 5.1MB 的大字符串进行匹配，同时与 PCRE 和 RE2 这些正则引擎进行性能比较，还是非常乐观的。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrJWSA18B?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrJWSA18B?rl=0">
+   <img src="http://ww4.sinaimg.cn/wap180/6d579ff4gw1eu7e9fzgcej20fa0hijsf.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrJWSA18B&amp;u=6d579ff4gw1eu7e9fzgcej20fa0hijsf">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CrJWSA18B/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[35]
+  </a>
+  <a href="http://weibo.cn/repost/CrJWSA18B?uid=1834459124&amp;rl=0">
+   转发[14]
+  </a>
+  <a href="http://weibo.cn/comment/CrJWSA18B?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[5]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrJWSA18B?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月19日 00:31 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrE2zmPU4"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   我用 1277 行 Perl 代码为 sregex 正则库实现的 DFA 引擎的原型，刚刚终于完全通过了 sregex 庞大的测试集（含子匹配捕获测试）。sregex 的测试集由 PCRE 官方测试集和 Perl 5 官方测试集构成，筛去了那些使用了 sregex 不支持的正则特性的用例。这是一个重要的里程碑，初步验证了我的这个 DFA 算法。
+  </span>
+  <span class="cmt">
+   赞[55]
+  </span>
+  <span class="cmt">
+   原文转发[23]
+  </span>
+  <a href="http://weibo.cn/comment/CrAB1fZgm?rl=0#cmtfrm" class="cc">
+   原文评论[6]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  Perl 的表达力很强，适合用来构造快速原型。这个一千多行的原型实现还包含了一个基于 GraphViz 的 NFA 状态图生成器，一个 DFA 状态图生成器，和一个从 DFA 出发的 Perl 代码生成器（把 DFA 编译为执行等价匹配的 Perl 代码）。所以它是一个编译器而非解释器。下一步就是直接吐 C 代码了。
+  <a href="http://weibo.cn/attitude/CrE2zmPU4/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[9]
+  </a>
+  <a href="http://weibo.cn/repost/CrE2zmPU4?uid=1834459124&amp;rl=0">
+   转发[10]
+  </a>
+  <a href="http://weibo.cn/comment/CrE2zmPU4?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrE2zmPU4?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月18日 09:28 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrAB1fZgm"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   我用 1277 行 Perl 代码为 sregex 正则库实现的 DFA 引擎的原型，刚刚终于完全通过了 sregex 庞大的测试集（含子匹配捕获测试）。sregex 的测试集由 PCRE 官方测试集和 Perl 5 官方测试集构成，筛去了那些使用了 sregex 不支持的正则特性的用例。这是一个重要的里程碑，初步验证了我的这个 DFA 算法。
+  </span>
+  <a href="http://weibo.cn/attitude/CrAB1fZgm/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[55]
+  </a>
+  <a href="http://weibo.cn/repost/CrAB1fZgm?uid=1834459124&amp;rl=0">
+   转发[23]
+  </a>
+  <a href="http://weibo.cn/comment/CrAB1fZgm?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[6]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrAB1fZgm?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月18日 00:42 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Crvisj6go"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   非确定性是优化的大敌，去除就海阔天空。我注意到 sregex 在把正则转换为 DFA 之后，这个 DFA 其实就是经典的优化编译器算法中的控制流图（CFG），而 DFA 边上打的子匹配捕获的映射标签其实就是经典的数据流图（DFG）。这样的 DFA 可以很容易地转换为 SSA 形式，从而享受到所有传统的编译器优化算法。
+  </span>
+  <a href="http://weibo.cn/attitude/Crvisj6go/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[9]
+  </a>
+  <a href="http://weibo.cn/repost/Crvisj6go?uid=1834459124&amp;rl=0">
+   转发[2]
+  </a>
+  <a href="http://weibo.cn/comment/Crvisj6go?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[8]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Crvisj6go?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月17日 11:13 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrqEz7Ryi"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   给 DFA 添加子匹配捕获其实是相对容易的，直接在状态转换（或“边”）上添加捕获映射就可以了，类似编程语言里的变量赋值。真正困难的是给 DFA 添加 0 宽度断言的支持，比如 ^, $, \b。这些断言本质就具有非确定性，通常依赖于上下文。在 DFA 中不得不展开这种不确定性，于是产生“边”的组合爆炸。
+  </span>
+  <span class="cmt">
+   赞[6]
+  </span>
+  <span class="cmt">
+   原文转发[5]
+  </span>
+  <a href="http://weibo.cn/comment/CrqBCv5oG?rl=0#cmtfrm" class="cc">
+   原文评论[5]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  幸运的是，最坏情况下的组合爆合貌似比较罕见，一般是那种带有高度歧义性的正则。这两天我花了不到 500 行 Perl 代码实现了一个一阶近似的断言“分支展开”的实现，结果已经顺利通过了 sregex 庞大的测试集的 99.9%. 余下的 0.1% 的用例貌似都是更一般的断言分支展开的情形，需要精确算法的实现了。
+  <a href="http://weibo.cn/attitude/CrqEz7Ryi/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[13]
+  </a>
+  <a href="http://weibo.cn/repost/CrqEz7Ryi?uid=1834459124&amp;rl=0">
+   转发[2]
+  </a>
+  <a href="http://weibo.cn/comment/CrqEz7Ryi?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrqEz7Ryi?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月16日 23:23 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrqBCv5oG"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   给 DFA 添加子匹配捕获其实是相对容易的，直接在状态转换（或“边”）上添加捕获映射就可以了，类似编程语言里的变量赋值。真正困难的是给 DFA 添加 0 宽度断言的支持，比如 ^, $, \b。这些断言本质就具有非确定性，通常依赖于上下文。在 DFA 中不得不展开这种不确定性，于是产生“边”的组合爆炸。
+  </span>
+  <a href="http://weibo.cn/attitude/CrqBCv5oG/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[6]
+  </a>
+  <a href="http://weibo.cn/repost/CrqBCv5oG?uid=1834459124&amp;rl=0">
+   转发[5]
+  </a>
+  <a href="http://weibo.cn/comment/CrqBCv5oG?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[5]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrqBCv5oG?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月16日 23:16 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Crq1rqIKq"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   调试正则引擎若没有 Graph viz 这样的自动绘图神器，必会痛苦不堪。如今可以看图说话，实是惬意。比如下面是 sregex 为正则 /.*\z/ 生成的 NFA 和 DFA 状态图（是的，我正在调试 Perl 官方测试集中一个使用了此正则的测试用例）。从图上能看到，我把子匹配捕获信息作为标签打在了状态转换的“边”上。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrpZq9wRw?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrpZq9wRw?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/6d579ff4gw1eu4y3sfsl7j208606wmxm.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrpZq9wRw&amp;u=6d579ff4gw1eu4y3sfsl7j208606wmxm">
+   原图
+  </a>
+  <span class="cmt">
+   赞[11]
+  </span>
+  <span class="cmt">
+   原文转发[45]
+  </span>
+  <a href="http://weibo.cn/comment/CrpZq9wRw?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  图中状态圆圈的数字一般是正则虚拟机字节码的编号。大家有兴趣可以看 Russ Cox 同学的 Implementing Regular Expressions 系列教程：
+  <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLcE34u&amp;ep=Crq1rqIKq%2C1834459124%2CCrq1rqIKq%2C1834459124">
+   http://t.cn/RLcE34u
+  </a>
+  我在 sregex 引擎里的正则虚拟机的设计，就是基于 Russ 在那里的描述。当然，Russ 描述的 Thompson NFA 仿真算法应当可以更上一层楼。
+  <a href="http://weibo.cn/attitude/Crq1rqIKq/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/Crq1rqIKq?uid=1834459124&amp;rl=0">
+   转发[22]
+  </a>
+  <a href="http://weibo.cn/comment/Crq1rqIKq?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Crq1rqIKq?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月16日 21:47 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrpZq9wRw"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   调试正则引擎若没有 Graph viz 这样的自动绘图神器，必会痛苦不堪。如今可以看图说话，实是惬意。比如下面是 sregex 为正则 /.*\z/ 生成的 NFA 和 DFA 状态图（是的，我正在调试 Perl 官方测试集中一个使用了此正则的测试用例）。从图上能看到，我把子匹配捕获信息作为标签打在了状态转换的“边”上。
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CrpZq9wRw?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CrpZq9wRw?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/6d579ff4gw1eu4y3sfsl7j208606wmxm.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CrpZq9wRw&amp;u=6d579ff4gw1eu4y3sfsl7j208606wmxm">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CrpZq9wRw/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[11]
+  </a>
+  <a href="http://weibo.cn/repost/CrpZq9wRw?uid=1834459124&amp;rl=0">
+   转发[45]
+  </a>
+  <a href="http://weibo.cn/comment/CrpZq9wRw?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrpZq9wRw?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月16日 21:42 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CrmgBb8V0"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   最新的 nginx 1.9.3 核心不再允许同一个 nginx.conf 文件里面定义多个 http {} 配置块。这意味着这个问题多多的故意没有文档说明的“黑暗特牲”的寿终正寝。之前不少 nginx 用户喜欢使用这个特性来在虚拟主机之上再玩状态隔离，可惜这种隔离有很多漏洞，包括输出过滤器啥的全局机制根本不可能被隔离。
+  </span>
+  <a href="http://weibo.cn/attitude/CrmgBb8V0/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[11]
+  </a>
+  <a href="http://weibo.cn/repost/CrmgBb8V0?uid=1834459124&amp;rl=0">
+   转发[13]
+  </a>
+  <a href="http://weibo.cn/comment/CrmgBb8V0?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CrmgBb8V0?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月16日 12:13 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CqLLft0O0"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   刚花了 1000 行 Perl 代码，为 sregex 新一代的 DFA 引擎构造了一个快速原型，根据 sregex 前端生成的正则 VM 字节码，构造出 DFA，再生成等价的 Perl 代码。除了正则断言和多正则并行匹配尚未实现之外，其他都可以工作了。测试集中相关的测试用例也都通过了。原型的实现在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLbdLv9&amp;ep=CqLLft0O0%2C1834459124%2CCqLKbhfi0%2C1834459124">
+    http://t.cn/RLbdLv9
+   </a>
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CqLKbhfi0?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CqLKbhfi0?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/6d579ff4gw1eu00gtdpx1j20vi0yy46v.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CqLKbhfi0&amp;u=6d579ff4gw1eu00gtdpx1j20vi0yy46v">
+   原图
+  </a>
+  <span class="cmt">
+   赞[16]
+  </span>
+  <span class="cmt">
+   原文转发[49]
+  </span>
+  <a href="http://weibo.cn/comment/CqLKbhfi0?rl=0#cmtfrm" class="cc">
+   原文评论[8]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  这个快速原型脚本，re.pl，还能自动利用 Graphviz 输出正则对应的 NFA 和 DFA（都带有子匹配捕获标记）。该原型的目的主要是为了验证算法的有效性和正确性。待余下的正则特性都实现并测试通过后，就可以尝试移植为纯 C 实现，成为 sregex 正则引擎的第三个 VM 后端。
+  <a href="http://weibo.cn/attitude/CqLLft0O0/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[9]
+  </a>
+  <a href="http://weibo.cn/repost/CqLLft0O0?uid=1834459124&amp;rl=0">
+   转发[38]
+  </a>
+  <a href="http://weibo.cn/comment/CqLLft0O0?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CqLLft0O0?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月12日 15:17 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_CqLKbhfi0"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   刚花了 1000 行 Perl 代码，为 sregex 新一代的 DFA 引擎构造了一个快速原型，根据 sregex 前端生成的正则 VM 字节码，构造出 DFA，再生成等价的 Perl 代码。除了正则断言和多正则并行匹配尚未实现之外，其他都可以工作了。测试集中相关的测试用例也都通过了。原型的实现在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLbdLv9&amp;ep=CqLKbhfi0%2C1834459124%2CCqLKbhfi0%2C1834459124">
+    http://t.cn/RLbdLv9
+   </a>
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CqLKbhfi0?rl=1">
+   组图共2张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CqLKbhfi0?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/6d579ff4gw1eu00gtdpx1j20vi0yy46v.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CqLKbhfi0&amp;u=6d579ff4gw1eu00gtdpx1j20vi0yy46v">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CqLKbhfi0/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[16]
+  </a>
+  <a href="http://weibo.cn/repost/CqLKbhfi0?uid=1834459124&amp;rl=0">
+   转发[49]
+  </a>
+  <a href="http://weibo.cn/comment/CqLKbhfi0?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[8]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CqLKbhfi0?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月12日 15:15 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CqL80Fy8n"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   貌似 OpenResty 又上 Hacker News 了，一天以内 openresty.org 有十万请求，10 GB 的流量。我一开始还以为服务器受攻击了……
+  </span>
+  <a href="http://weibo.cn/attitude/CqL80Fy8n/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[38]
+  </a>
+  <a href="http://weibo.cn/repost/CqL80Fy8n?uid=1834459124&amp;rl=0">
+   转发[9]
+  </a>
+  <a href="http://weibo.cn/comment/CqL80Fy8n?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[10]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CqL80Fy8n?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月12日 13:41 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cqw3u1vuG"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   前些日子一直冥思苦想，终于设计出了一种算法，能让确定性有穷自动机（DFA）能够支持子匹配捕获，这样 sregex 流式正则引擎的匹配效率将有望超越 PCRE JIT 和 RE2，乃至接近 Ragel 这样的静态代码生成器（如果这个 DFA 内置 JIT 编译器的话）。下图是 sregex 为正则表达式 /ab|(a)/ 生成的 DFA 状态图
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CqvZa0OG3?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/6d579ff4gw1ety2welduyj20f20btwfh.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CqvZa0OG3&amp;u=6d579ff4gw1ety2welduyj20f20btwfh">
+   原图
+  </a>
+  <span class="cmt">
+   赞[41]
+  </span>
+  <span class="cmt">
+   原文转发[24]
+  </span>
+  <a href="http://weibo.cn/comment/CqvZa0OG3?rl=0#cmtfrm" class="cc">
+   原文评论[6]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  几个月前我和 Perl 之父 Larry Wall 专门讨论过这个问题。Larry 老师说 DFA 应该是可以直接原生支持子匹配捕获。于是我才努力进行尝试。要让正则引擎的效率达到极致，就必须走 DFA 之路，其他什么回溯算法啦，NFA 仿真算法啦，都没有出路。希望我的这个 sregex 的 DFA 原型实现后面能通过整个测试集。
+  <a href="http://weibo.cn/attitude/Cqw3u1vuG/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[40]
+  </a>
+  <a href="http://weibo.cn/repost/Cqw3u1vuG?uid=1834459124&amp;rl=0">
+   转发[15]
+  </a>
+  <a href="http://weibo.cn/comment/Cqw3u1vuG?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[6]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cqw3u1vuG?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月10日 23:18 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CqvZa0OG3"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   前些日子一直冥思苦想，终于设计出了一种算法，能让确定性有穷自动机（DFA）能够支持子匹配捕获，这样 sregex 流式正则引擎的匹配效率将有望超越 PCRE JIT 和 RE2，乃至接近 Ragel 这样的静态代码生成器（如果这个 DFA 内置 JIT 编译器的话）。下图是 sregex 为正则表达式 /ab|(a)/ 生成的 DFA 状态图
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CqvZa0OG3?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/6d579ff4gw1ety2welduyj20f20btwfh.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CqvZa0OG3&amp;u=6d579ff4gw1ety2welduyj20f20btwfh">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/CqvZa0OG3/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[41]
+  </a>
+  <a href="http://weibo.cn/repost/CqvZa0OG3?uid=1834459124&amp;rl=0">
+   转发[24]
+  </a>
+  <a href="http://weibo.cn/comment/CqvZa0OG3?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[6]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CqvZa0OG3?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月10日 23:08 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cqlfyb7IN"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   奇虎 360 的 moonbingbing 等热心用户正在编撰一本免费的电子书，题为《OpenResty 最佳实践》，在此向大家推荐之，虽然我还未及细看。地址在这里：https://www.gitbook.com/book/moonbingbing/openresty-best-practices/details 后面得空了我一定得仔细拜读一下。感谢他们的分享与贡献！
+  </span>
+  <span class="cmt">
+   赞[25]
+  </span>
+  <span class="cmt">
+   原文转发[103]
+  </span>
+  <a href="http://weibo.cn/comment/CqbIUoXD1?rl=0#cmtfrm" class="cc">
+   原文评论[23]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  哇，赞！大客户呀//
+  <a href="/n/%E6%B0%B8%E5%A4%9C">
+   @永夜
+  </a>
+  : 你应该写个，咱们openresty，复杂逻辑，承载了十几亿流量呢 //
+  <a href="/n/Wleehow">
+   @Wleehow
+  </a>
+  :回复
+  <a href="/n/Anwar">
+   @Anwar
+  </a>
+  :
+  <a href="/n/%E6%B0%B8%E5%A4%9C">
+   @永夜
+  </a>
+  <a href="/n/%E5%B4%94%E5%BB%BA%E5%85%B4">
+   @崔建兴
+  </a>
+  <a href="/n/%E5%A4%8F%E6%9D%91%E6%8B%93%E5%93%89">
+   @夏村拓哉
+  </a>
+  学习学习然后咱们也整个？[酷][酷] //
+  <a href="/n/Anwar">
+   @Anwar
+  </a>
+  :
+  <a href="/n/%E6%B0%B8%E5%A4%9C">
+   @永夜
+  </a>
+  <a href="/n/Wleehow">
+   @Wleehow
+  </a>
+  <a href="http://weibo.cn/attitude/Cqlfyb7IN/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[13]
+  </a>
+  <a href="http://weibo.cn/repost/Cqlfyb7IN?uid=1834459124&amp;rl=0">
+   转发[13]
+  </a>
+  <a href="http://weibo.cn/comment/Cqlfyb7IN?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[8]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cqlfyb7IN?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月09日 19:48 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CqbIUoXD1"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   奇虎 360 的 moonbingbing 等热心用户正在编撰一本免费的电子书，题为《OpenResty 最佳实践》，在此向大家推荐之，虽然我还未及细看。地址在这里：https://www.gitbook.com/book/moonbingbing/openresty-best-practices/details 后面得空了我一定得仔细拜读一下。感谢他们的分享与贡献！
+  </span>
+  <a href="http://weibo.cn/attitude/CqbIUoXD1/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[25]
+  </a>
+  <a href="http://weibo.cn/repost/CqbIUoXD1?uid=1834459124&amp;rl=0">
+   转发[103]
+  </a>
+  <a href="http://weibo.cn/comment/CqbIUoXD1?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[23]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CqbIUoXD1?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月08日 19:33 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CpBnpcSeI"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   今晚给我的 sregex 正则库添加了比较完整的 C API 的文档：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLZBiQZ&amp;ep=CpBnpcSeI%2C1834459124%2CCpBnpcSeI%2C1834459124">
+    http://t.cn/RLZBiQZ
+   </a>
+   欢迎大家反馈意见和建议。下面要开始好好优化一下这个库的实现，同时添加一些尚未实现的 Perl 正则特性 :D
+  </span>
+  <a href="http://weibo.cn/attitude/CpBnpcSeI/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/CpBnpcSeI?uid=1834459124&amp;rl=0">
+   转发[8]
+  </a>
+  <a href="http://weibo.cn/comment/CpBnpcSeI?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CpBnpcSeI?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月04日 23:01 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cpq60mfII"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   OpenResty 正式版 1.7.10.2 刚刚发布。下载地址是：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLzjJyd&amp;ep=Cpq60mfII%2C1834459124%2CCpq3SfHZU%2C1834459124">
+    http://t.cn/RLzjJyd
+   </a>
+   完整的更动列表在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLzjJyg&amp;ep=Cpq60mfII%2C1834459124%2CCpq3SfHZU%2C1834459124">
+    http://t.cn/RLzjJyg
+   </a>
+   更动日志的长度应该创记录了，毕竟有好几个月没有正式版发布了。如果不能访问上面的链接，请自觉翻墙。感谢所有的贡献者和用户！下一个版本将基于新的 nginx 1.9.x 核心。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/Cpq3SfHZU?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1etpr1fv9btj20dw0513yy.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=Cpq3SfHZU&amp;u=6d579ff4gw1etpr1fv9btj20dw0513yy">
+   原图
+  </a>
+  <span class="cmt">
+   赞[16]
+  </span>
+  <span class="cmt">
+   原文转发[42]
+  </span>
+  <a href="http://weibo.cn/comment/Cpq3SfHZU?rl=0#cmtfrm" class="cc">
+   原文评论[16]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  下个版本应该还不会有这个 TCP server by lua 的支持。这不仅需要新的 nginx 核心，还需要新的 ngx_stream_lua_module（目前仅是 ngx_http_lua_module）。 //
+  <a href="/n/%E9%99%88%E5%B0%8F%E7%8E%89">
+   @陈小玉
+  </a>
+  :期待下一版本（1.9.x）直接对 tcp 进行各种 *_by_lua* ~
+  <a href="http://weibo.cn/attitude/Cpq60mfII/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[3]
+  </a>
+  <a href="http://weibo.cn/repost/Cpq60mfII?uid=1834459124&amp;rl=0">
+   转发[17]
+  </a>
+  <a href="http://weibo.cn/comment/Cpq60mfII?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cpq60mfII?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月03日 18:18 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cpq3SfHZU"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   OpenResty 正式版 1.7.10.2 刚刚发布。下载地址是：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLzjJyd&amp;ep=Cpq3SfHZU%2C1834459124%2CCpq3SfHZU%2C1834459124">
+    http://t.cn/RLzjJyd
+   </a>
+   完整的更动列表在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRLzjJyg&amp;ep=Cpq3SfHZU%2C1834459124%2CCpq3SfHZU%2C1834459124">
+    http://t.cn/RLzjJyg
+   </a>
+   更动日志的长度应该创记录了，毕竟有好几个月没有正式版发布了。如果不能访问上面的链接，请自觉翻墙。感谢所有的贡献者和用户！下一个版本将基于新的 nginx 1.9.x 核心。
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/Cpq3SfHZU?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/6d579ff4gw1etpr1fv9btj20dw0513yy.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=Cpq3SfHZU&amp;u=6d579ff4gw1etpr1fv9btj20dw0513yy">
+   原图
+  </a>
+  <a href="http://weibo.cn/attitude/Cpq3SfHZU/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[16]
+  </a>
+  <a href="http://weibo.cn/repost/Cpq3SfHZU?uid=1834459124&amp;rl=0">
+   转发[42]
+  </a>
+  <a href="http://weibo.cn/comment/Cpq3SfHZU?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[16]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cpq3SfHZU?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月03日 18:12 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cp8XdoYPu"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   PCER JIT 的作者 Zoltan 老师告诉我，他一直在实现新的正则优化策略，但新的优化将只会进入全新的 PCRE2，而不再进入经典的 PCRE 了。遗憾啊，得想办法推动 NGINX 支持新的 PCRE2 的 API 了。Zoltan 老师非常热情，主动提出给我答疑。我得好好拜师学艺，以便把我自己的 sregex 正则引擎做得越来越好。
+  </span>
+  <span class="cmt">
+   赞[20]
+  </span>
+  <span class="cmt">
+   原文转发[15]
+  </span>
+  <a href="http://weibo.cn/comment/CoYVAEgYt?rl=0#cmtfrm" class="cc">
+   原文评论[6]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  赞！sregex 引擎近期将获得大幅的优化改进 :) 我这些日子正在努力设计和规划。//
+  <a href="/n/zpress">
+   @zpress
+  </a>
+  : 现在在用的waf就是用的lua+sregex做正则匹配，效率非常高，期待更新[good]
+  <a href="http://weibo.cn/attitude/Cp8XdoYPu/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[11]
+  </a>
+  <a href="http://weibo.cn/repost/Cp8XdoYPu?uid=1834459124&amp;rl=0">
+   转发[8]
+  </a>
+  <a href="http://weibo.cn/comment/Cp8XdoYPu?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cp8XdoYPu?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   07月01日 22:39 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_CoYVAEgYt"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   PCER JIT 的作者 Zoltan 老师告诉我，他一直在实现新的正则优化策略，但新的优化将只会进入全新的 PCRE2，而不再进入经典的 PCRE 了。遗憾啊，得想办法推动 NGINX 支持新的 PCRE2 的 API 了。Zoltan 老师非常热情，主动提出给我答疑。我得好好拜师学艺，以便把我自己的 sregex 正则引擎做得越来越好。
+  </span>
+  <a href="http://weibo.cn/attitude/CoYVAEgYt/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[20]
+  </a>
+  <a href="http://weibo.cn/repost/CoYVAEgYt?uid=1834459124&amp;rl=0">
+   转发[15]
+  </a>
+  <a href="http://weibo.cn/comment/CoYVAEgYt?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[6]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CoYVAEgYt?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月30日 21:08 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CoWhtFGim"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/242808783">
+    KawaruNagisa
+   </a>
+   <img src="http://u1.sinaimg.cn/upload/2011/08/16/5547.gif" alt="达人">
+   的微博:
+  </span>
+  <span class="ctt">
+   看到有人简单比较了下pcre的若干种模式、re2还有其他几个正则引擎的速度，re2表现十分稳定而且快速，相比之下只有pcre-jit能够媲美。
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FaeBkNf&amp;ep=CoWhtFGim%2C1834459124%2CBfQ03A0jr%2C1393667373">
+    http://t.cn/aeBkNf
+   </a>
+  </span>
+  <span class="cmt">
+   赞[0]
+  </span>
+  <span class="cmt">
+   原文转发[3]
+  </span>
+  <a href="http://weibo.cn/comment/BfQ03A0jr?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  你发的这个性能比较页面其实就是 PCRE JIT 的作者 Zoltán Herczeg 创建的。re2 基于 DFA 和 NFA 仿真（Thompson 的 NFA 构造加 Pike 的分组捕获扩展，外加 DFA cache），确实性能比较稳定，没什么病态案例会跑崩掉，只可惜相比 PCRE JIT 平均还是要慢一倍（至少对于我们生产系统的 WAF 应用）。
+  <a href="http://weibo.cn/attitude/CoWhtFGim/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/CoWhtFGim?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CoWhtFGim?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CoWhtFGim?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月30日 14:24 来自微博搜索
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CoQecDmtf"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   越来越喜欢 briss 这个 Java 应用了；最新版本貌似更好用了一些。若是没有它来给 PDF 进行自动剪边，PDF 格式的论文和图书放在 Sony Digital Paper 里看，字还是会太小。剪完边字就同步放大了，正好是眼睛舒服的大小。赞。
+  </span>
+  <span class="cmt">
+   赞[5]
+  </span>
+  <span class="cmt">
+   原文转发[14]
+  </span>
+  <a href="http://weibo.cn/comment/CoPfkk6NH?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  好吧，刚刚想用 briss 处理 Intel 的 PDF 开发者手册，结果抛了一个 ArrayIndexOutOfBoundsException 异常崩掉了。仔细一看调用栈，是  JPedal 这个第三方 PDF Java 库在解密时抛出来的。原来这些 PDF 有编辑密码保护。去掉密码就 OK 了。
+  <a href="http://weibo.cn/attitude/CoQecDmtf/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[10]
+  </a>
+  <a href="http://weibo.cn/repost/CoQecDmtf?uid=1834459124&amp;rl=0">
+   转发[6]
+  </a>
+  <a href="http://weibo.cn/comment/CoQecDmtf?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[5]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CoQecDmtf?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月29日 22:59 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CoPfkk6NH"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   越来越喜欢 briss 这个 Java 应用了；最新版本貌似更好用了一些。若是没有它来给 PDF 进行自动剪边，PDF 格式的论文和图书放在 Sony Digital Paper 里看，字还是会太小。剪完边字就同步放大了，正好是眼睛舒服的大小。赞。
+  </span>
+  <a href="http://weibo.cn/attitude/CoPfkk6NH/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/CoPfkk6NH?uid=1834459124&amp;rl=0">
+   转发[14]
+  </a>
+  <a href="http://weibo.cn/comment/CoPfkk6NH?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CoPfkk6NH?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月29日 20:29 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CoPaWtuXo"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/u/5271531443">
+    nglua
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   nginx另一个性能杀手锏-线程池
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2DJsmR&amp;ep=CoPaWtuXo%2C1834459124%2CCojNr7O4x%2C5271531443">
+    http://t.cn/R2DJsmR
+   </a>
+  </span>
+  <span class="cmt">
+   赞[3]
+  </span>
+  <span class="cmt">
+   原文转发[60]
+  </span>
+  <a href="http://weibo.cn/comment/CojNr7O4x?rl=0#cmtfrm" class="cc">
+   原文评论[3]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  你这是滥用 nginx 的线程池。线程池的引入是为了处理不得不阻塞的 I/O，比如文件 I/O. 将之用于本可以 100% 非阻塞的网络 I/O 是巨大的退步，让 nginx 退化为 Apache worker fpm 了，靠 OS 线程来拼并发，彻底告别 C10K 了。nginx 官方介绍此特性的博客也是拿 disk I/O 来举例的：
+  <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2mhvkd&amp;ep=CoPaWtuXo%2C1834459124%2CCoPaWtuXo%2C1834459124">
+   http://t.cn/R2mhvkd
+  </a>
+  <a href="http://weibo.cn/attitude/CoPaWtuXo/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[31]
+  </a>
+  <a href="http://weibo.cn/repost/CoPaWtuXo?uid=1834459124&amp;rl=0">
+   转发[54]
+  </a>
+  <a href="http://weibo.cn/comment/CoPaWtuXo?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[16]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CoPaWtuXo?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月29日 20:18 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Co4PBCT12"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   OpenResty 1.7.10.2 RC1 刚刚发布。发布公告在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2gPmz6&amp;ep=Co4PBCT12%2C1834459124%2CCo4PBCT12%2C1834459124">
+    http://t.cn/R2gPmz6
+   </a>
+   下载地址在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2gPmza&amp;ep=Co4PBCT12%2C1834459124%2CCo4PBCT12%2C1834459124">
+    http://t.cn/R2gPmza
+   </a>
+   欢迎大家测试反馈。访问不了的话，请自觉翻墙，呵呵。
+  </span>
+  <a href="http://weibo.cn/attitude/Co4PBCT12/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[10]
+  </a>
+  <a href="http://weibo.cn/repost/Co4PBCT12?uid=1834459124&amp;rl=0">
+   转发[9]
+  </a>
+  <a href="http://weibo.cn/comment/Co4PBCT12?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[9]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Co4PBCT12?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月24日 22:19 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cns1uswHu"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   我的一位国外用户最近撰文介绍了一下他是如何使用 ngx_lua 模块最近开源的 ssl_certificate_by_lua 指令实现让 nginx 动态为 https 请求现生成对应的 SSL 证书的。这种玩法比我们公司还要激进一些，我们只是 lazy load 证书和私钥，而他干脆是 lazy generate，有趣。文章在这里：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2uD88u&amp;ep=Cns1uswHu%2C1834459124%2CCns1uswHu%2C1834459124">
+    http://t.cn/R2uD88u
+   </a>
+  </span>
+  <a href="http://weibo.cn/attitude/Cns1uswHu/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[15]
+  </a>
+  <a href="http://weibo.cn/repost/Cns1uswHu?uid=1834459124&amp;rl=0">
+   转发[31]
+  </a>
+  <a href="http://weibo.cn/comment/Cns1uswHu?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[8]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cns1uswHu?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月20日 19:31 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cnp9K5f6b"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   GitHub 的工程师们今年使用 OpenResty 的核心组件 ngx_lua 重新架构了 GitHub Pages 这个在线产品。他们对新架构的性能、可扩展性以及简单性貌似都很满意。他们的架构师 Charlie Somerville 撰文分享了相关的经验：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2Va1OE&amp;ep=Cnp9K5f6b%2C1834459124%2CCnp9K5f6b%2C1834459124">
+    http://t.cn/R2Va1OE
+   </a>
+   作为 GitHub 的重度用户，我很高兴看到 GitHub 也在玩我的东西。
+  </span>
+  <a href="http://weibo.cn/attitude/Cnp9K5f6b/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[72]
+  </a>
+  <a href="http://weibo.cn/repost/Cnp9K5f6b?uid=1834459124&amp;rl=0">
+   转发[148]
+  </a>
+  <a href="http://weibo.cn/comment/Cnp9K5f6b?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[29]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cnp9K5f6b?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月20日 12:14 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CnoDb1402"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   折腾了几个小时，终于基于 Rime/Squirrel 的框架为 Mac 自定义了一个完整的五笔 98 输入法。克服了我原先那个版本的所有缺点，比如四码不能自动上屏以及标点也需要空格确认等等。Rime 才是给程序员玩的输入法，只需要搞搞 .yaml 配置文件就 OK 了；我直接编了一个简单的 Perl 脚本自动生成了这些文件。
+  </span>
+  <span class="cmt">
+   赞[19]
+  </span>
+  <span class="cmt">
+   原文转发[18]
+  </span>
+  <a href="http://weibo.cn/comment/CnjYbfG9r?rl=0#cmtfrm" class="cc">
+   原文评论[10]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  我自己使用的 Rime 配置文件贴到了 Gist 上面（国内访问可能需要翻墙）：
+  <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2uaMdV&amp;ep=CnoDb1402%2C1834459124%2CCnoDb1402%2C1834459124">
+   http://t.cn/R2uaMdV
+  </a>
+  码表部分由于版权方面的问题没有给全，只给了几个字的编码和权重意思一下。仅供参考。
+  <a href="http://weibo.cn/attitude/CnoDb1402/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/CnoDb1402?uid=1834459124&amp;rl=0">
+   转发[2]
+  </a>
+  <a href="http://weibo.cn/comment/CnoDb1402?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CnoDb1402?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月20日 10:53 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cnk40Bpyl"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   折腾了几个小时，终于基于 Rime/Squirrel 的框架为 Mac 自定义了一个完整的五笔 98 输入法。克服了我原先那个版本的所有缺点，比如四码不能自动上屏以及标点也需要空格确认等等。Rime 才是给程序员玩的输入法，只需要搞搞 .yaml 配置文件就 OK 了；我直接编了一个简单的 Perl 脚本自动生成了这些文件。
+  </span>
+  <span class="cmt">
+   赞[19]
+  </span>
+  <span class="cmt">
+   原文转发[18]
+  </span>
+  <a href="http://weibo.cn/comment/CnjYbfG9r?rl=0#cmtfrm" class="cc">
+   原文评论[10]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  Rime 官方提供的五笔 86 输入法的配置并不会四码自动上屏（无重码时），我稍微琢磨了一下发现原来需要在 .schema.yaml 配置文件里的 speller 段落下添加 max_code_length: 4 和 auto_select: true 这两行就可以了。这是一个小坑，貌似只在官方更新日志里提及了。其他的在官方手册里讲得很详细。很赞。
+  <a href="http://weibo.cn/attitude/Cnk40Bpyl/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[3]
+  </a>
+  <a href="http://weibo.cn/repost/Cnk40Bpyl?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/Cnk40Bpyl?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[6]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cnk40Bpyl?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月19日 23:16 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_Cnk04xWsW"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   折腾了几个小时，终于基于 Rime/Squirrel 的框架为 Mac 自定义了一个完整的五笔 98 输入法。克服了我原先那个版本的所有缺点，比如四码不能自动上屏以及标点也需要空格确认等等。Rime 才是给程序员玩的输入法，只需要搞搞 .yaml 配置文件就 OK 了；我直接编了一个简单的 Perl 脚本自动生成了这些文件。
+  </span>
+  <span class="cmt">
+   赞[19]
+  </span>
+  <span class="cmt">
+   原文转发[18]
+  </span>
+  <a href="http://weibo.cn/comment/CnjYbfG9r?rl=0#cmtfrm" class="cc">
+   原文评论[10]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  感谢所有向我推荐 Rime/Squirrel 输入法平台的朋友。确实是“万能的微博”。我那个一次性的 Perl 脚本还读取了 Rime 官方提供的五笔 86 的码表里的字频权重，继承到我自己的 98 码表里，这样重码的默认排序就比较人性了。终于解决了 OS X 上面五笔 98 输入的难题。Rime 的作者也很有文采，太有才了。
+  <a href="http://weibo.cn/attitude/Cnk04xWsW/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/Cnk04xWsW?uid=1834459124&amp;rl=0">
+   转发[5]
+  </a>
+  <a href="http://weibo.cn/comment/Cnk04xWsW?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cnk04xWsW?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月19日 23:06 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CnjYbfG9r"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   折腾了几个小时，终于基于 Rime/Squirrel 的框架为 Mac 自定义了一个完整的五笔 98 输入法。克服了我原先那个版本的所有缺点，比如四码不能自动上屏以及标点也需要空格确认等等。Rime 才是给程序员玩的输入法，只需要搞搞 .yaml 配置文件就 OK 了；我直接编了一个简单的 Perl 脚本自动生成了这些文件。
+  </span>
+  <a href="http://weibo.cn/attitude/CnjYbfG9r/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[19]
+  </a>
+  <a href="http://weibo.cn/repost/CnjYbfG9r?uid=1834459124&amp;rl=0">
+   转发[18]
+  </a>
+  <a href="http://weibo.cn/comment/CnjYbfG9r?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[10]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CnjYbfG9r?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月19日 23:01 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CniN46RTA"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   想把主要的工作环境迁移到 Mac OS X 系统上面来，还是太喜欢 Macbook 的 retina 屏了。但这前一直苦于没有现成的好使的五笔 98 输入法。幸好 google 了一下发现 Mac OS X 现在支持通过文本配置文件自定义新的输入法，类似 Linux 上面的 scim 和 ibus：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2m8JRN&amp;ep=CniN46RTA%2C1834459124%2CCniLRCrdQ%2C1834459124">
+    http://t.cn/R2m8JRN
+   </a>
+   于是自己造了一个五笔 98
+  </span>
+  <span class="cmt">
+   赞[9]
+  </span>
+  <span class="cmt">
+   原文转发[10]
+  </span>
+  <a href="http://weibo.cn/comment/CniLRCrdQ?rl=0#cmtfrm" class="cc">
+   原文评论[18]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  有些遗憾的是，这个 inputplugin 机制功能还很有限，没什么高级的配置项，比如我的五笔输入法在 4 键之后不能自动出字，还须按一个空格，另外输入过程中也没有推荐项提示，只有重码时才有提示，有些原始。不过勉强还能凑和着用。日后有空了再自己学一下用 Objective-C 啥的从零写一个 OS X 输入法。
+  <a href="http://weibo.cn/attitude/CniN46RTA/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[8]
+  </a>
+  <a href="http://weibo.cn/repost/CniN46RTA?uid=1834459124&amp;rl=0">
+   转发[4]
+  </a>
+  <a href="http://weibo.cn/comment/CniN46RTA?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[17]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CniN46RTA?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月19日 20:01 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CniLRCrdQ"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   想把主要的工作环境迁移到 Mac OS X 系统上面来，还是太喜欢 Macbook 的 retina 屏了。但这前一直苦于没有现成的好使的五笔 98 输入法。幸好 google 了一下发现 Mac OS X 现在支持通过文本配置文件自定义新的输入法，类似 Linux 上面的 scim 和 ibus：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FR2m8JRN&amp;ep=CniLRCrdQ%2C1834459124%2CCniLRCrdQ%2C1834459124">
+    http://t.cn/R2m8JRN
+   </a>
+   于是自己造了一个五笔 98
+  </span>
+  <a href="http://weibo.cn/attitude/CniLRCrdQ/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[9]
+  </a>
+  <a href="http://weibo.cn/repost/CniLRCrdQ?uid=1834459124&amp;rl=0">
+   转发[10]
+  </a>
+  <a href="http://weibo.cn/comment/CniLRCrdQ?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[18]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CniLRCrdQ?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月19日 19:58 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CniIwul65"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   VMWare Fusion Pro 7 在 OS X 上的性能果然惊艳啊，同一个 FreeBSD 虚机编译 OpenResty，相比在最新版的 VirtualBox 上，整体速度快了近 4 倍。而在 VMWare + Fedora 22 虚机上编 OpenResty，比 Mac OS X 宿主系统还要快得多，只需 14 秒多。真是有趣。看来 VirtualBox 还是有差距啊。
+  </span>
+  <span class="cmt">
+   赞[6]
+  </span>
+  <span class="cmt">
+   原文转发[7]
+  </span>
+  <a href="http://weibo.cn/comment/CnfAACpgi?rl=0#cmtfrm" class="cc">
+   原文评论[19]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  想装一个 Parallels Desktop 10 试一下，结果从官网上下的 .dmg 在安装过程中报了一个“Problem ID: 15380”的错误。查了一下官方的知识库，说是报这个错误是因为系统里有非 root 用户的 ID 为 0. 报文档里的命令检查了，并不存在这样的用户。体验不好啊，难道是因为我的 OS X 系统太新了？汗……
+  <a href="http://weibo.cn/attitude/CniIwul65/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[0]
+  </a>
+  <a href="http://weibo.cn/repost/CniIwul65?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CniIwul65?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CniIwul65?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月19日 19:50 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CnfAACpgi"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   VMWare Fusion Pro 7 在 OS X 上的性能果然惊艳啊，同一个 FreeBSD 虚机编译 OpenResty，相比在最新版的 VirtualBox 上，整体速度快了近 4 倍。而在 VMWare + Fedora 22 虚机上编 OpenResty，比 Mac OS X 宿主系统还要快得多，只需 14 秒多。真是有趣。看来 VirtualBox 还是有差距啊。
+  </span>
+  <a href="http://weibo.cn/attitude/CnfAACpgi/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[6]
+  </a>
+  <a href="http://weibo.cn/repost/CnfAACpgi?uid=1834459124&amp;rl=0">
+   转发[7]
+  </a>
+  <a href="http://weibo.cn/comment/CnfAACpgi?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[19]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CnfAACpgi?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月19日 11:52 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CnfkX8V9Q"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/nonamekao">
+    晓风信神
+   </a>
+   <img src="http://u1.sinaimg.cn/upload/2011/08/16/5547.gif" alt="达人">
+   的微博:
+  </span>
+  <span class="ctt">
+   openresty.org 挂了？怎么翻墙出去还是不能访问？
+   <a href="/n/agentzh">
+    @agentzh
+   </a>
+  </span>
+  <span class="cmt">
+   赞[0]
+  </span>
+  <span class="cmt">
+   原文转发[2]
+  </span>
+  <a href="http://weibo.cn/comment/Cn6xnyofV?rl=0#cmtfrm" class="cc">
+   原文评论[6]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  没有挂，我这里看挺好的。无论是 http:// 还是 https://
+  <a href="http://weibo.cn/attitude/CnfkX8V9Q/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[2]
+  </a>
+  <a href="http://weibo.cn/repost/CnfkX8V9Q?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CnfkX8V9Q?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[11]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CnfkX8V9Q?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   06月19日 11:14 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_ChDk8zySp"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   用 Type::Tiny 模块可以在 Perl 里面进行可自定义的强类型编程，主要好处是类型检查（而非性能），特别是在构造较复杂的程序，比如一个编译器的时候。同时也可以很好地控制类型约束的边界，在特别需要动态语言的弱类型时也可以随意实现。让我使用纯粹的强类型语言从零构造一个复杂的编译器还是挺累的。
+  </span>
+  <a href="http://weibo.cn/attitude/ChDk8zySp/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/ChDk8zySp?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/ChDk8zySp?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[3]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/ChDk8zySp?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月13日 13:16 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_ChDfsFQvA"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   花了两天时间，基于 Perl 的 Pegex 为我的 Edge 语言实现了一个解析器。我上月手工移植的那些为数众多的 .edge 源码文件终于都可以成功通过语法检查了。当然，我修了不少笔误。使用尚不存在的语言编程的好处是可以怎么爽怎么写，完全没有拘束。到实现编译器的时候再固化和调整原先的随性设计就好了。
+  </span>
+  <span class="cmt">
+   赞[7]
+  </span>
+  <span class="cmt">
+   原文转发[6]
+  </span>
+  <a href="http://weibo.cn/comment/ChDdAzuHB?rl=0#cmtfrm" class="cc">
+   原文评论[4]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  回复
+  <a href="/n/%E7%94%B0%E5%9B%AD%E7%A8%8B%E5%BA%8F%E7%8C%BF">
+   @田园程序猿
+  </a>
+  :yacc 的 LALR(1) 分析算法对文法的限制太多了。我现在不用处理 reduce/reduce 冲突，感觉真是太好了。递归下降分析器虽然性能次些，但可以方便地进行上下文有关的语法分析和词法分析，而且不用分别构造解析器和词法分析器。 //
+  <a href="/n/%E7%94%B0%E5%9B%AD%E7%A8%8B%E5%BA%8F%E7%8C%BF">
+   @田园程序猿
+  </a>
+  :语法分析 还是yacc来得直接
+  <a href="http://weibo.cn/attitude/ChDfsFQvA/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/ChDfsFQvA?uid=1834459124&amp;rl=0">
+   转发[5]
+  </a>
+  <a href="http://weibo.cn/comment/ChDfsFQvA?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[6]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/ChDfsFQvA?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月13日 13:04 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_ChDdAzuHB"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   花了两天时间，基于 Perl 的 Pegex 为我的 Edge 语言实现了一个解析器。我上月手工移植的那些为数众多的 .edge 源码文件终于都可以成功通过语法检查了。当然，我修了不少笔误。使用尚不存在的语言编程的好处是可以怎么爽怎么写，完全没有拘束。到实现编译器的时候再固化和调整原先的随性设计就好了。
+  </span>
+  <a href="http://weibo.cn/attitude/ChDdAzuHB/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[7]
+  </a>
+  <a href="http://weibo.cn/repost/ChDdAzuHB?uid=1834459124&amp;rl=0">
+   转发[6]
+  </a>
+  <a href="http://weibo.cn/comment/ChDdAzuHB?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/ChDdAzuHB?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月13日 13:00 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_ChD7WoH6p"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/haoel">
+    左耳朵耗子
+   </a>
+   <img src="http://u1.sinaimg.cn/upload/2011/07/28/5338.gif" alt="V">
+   的微博:
+  </span>
+  <span class="ctt">
+   <a href="/n/agentzh">
+    @agentzh
+   </a>
+   [挤眼]
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/ChAOz8CbO?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/538efefbjw1es28s4n7tjj20hs0dc0uv.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=ChAOz8CbO&amp;u=538efefbjw1es28s4n7tjj20hs0dc0uv">
+   原图
+  </a>
+  <span class="cmt">
+   赞[34]
+  </span>
+  <span class="cmt">
+   原文转发[13]
+  </span>
+  <a href="http://weibo.cn/comment/ChAOz8CbO?rl=0#cmtfrm" class="cc">
+   原文评论[33]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  嗯，我们是创业公司，一切从简了，呵呵。反正每天我在办公室里也只待几个小时而已。//
+  <a href="/n/netroby">
+   @netroby
+  </a>
+  : 回复
+  <a href="/n/agentzh">
+   @agentzh
+  </a>
+  :贵厂厂房不堪入眼啊。没有豪华大包房，木有程序员鼓励师。都是基佬，赤膊抠脚大汉。 //
+  <a href="/n/agentzh">
+   @agentzh
+  </a>
+  :啊，照片正中冥思苦想的是我们的杨书鑫老师啊。明显我不在位子上（我的位子在书鑫老师右手边
+  <a href="http://weibo.cn/attitude/ChD7WoH6p/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[7]
+  </a>
+  <a href="http://weibo.cn/repost/ChD7WoH6p?uid=1834459124&amp;rl=0">
+   转发[0]
+  </a>
+  <a href="http://weibo.cn/comment/ChD7WoH6p?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[11]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/ChD7WoH6p?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月13日 12:46 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_ChClLya3a"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/haoel">
+    左耳朵耗子
+   </a>
+   <img src="http://u1.sinaimg.cn/upload/2011/07/28/5338.gif" alt="V">
+   的微博:
+  </span>
+  <span class="ctt">
+   <a href="/n/agentzh">
+    @agentzh
+   </a>
+   [挤眼]
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/ChAOz8CbO?rl=0">
+   <img src="http://ww2.sinaimg.cn/wap180/538efefbjw1es28s4n7tjj20hs0dc0uv.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=ChAOz8CbO&amp;u=538efefbjw1es28s4n7tjj20hs0dc0uv">
+   原图
+  </a>
+  <span class="cmt">
+   赞[34]
+  </span>
+  <span class="cmt">
+   原文转发[13]
+  </span>
+  <a href="http://weibo.cn/comment/ChAOz8CbO?rl=0#cmtfrm" class="cc">
+   原文评论[33]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  啊，照片正中冥思苦想的是我们的杨书鑫老师啊。明显我不在位子上（我的位子在书鑫老师右手边）。
+  <a href="http://weibo.cn/attitude/ChClLya3a/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[4]
+  </a>
+  <a href="http://weibo.cn/repost/ChClLya3a?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/ChClLya3a?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[5]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/ChClLya3a?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月13日 10:47 来自
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Fdown.sina.cn%2Fsinaclient%2Fweibo%2Findex%2Fgsid%2F0%2Fmid%2F0">
+    iPhone客户端
+   </a>
+  </span>
+ </div>
+</div>
+<div class="c" id="M_ChaADqkhn"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/huayecn">
+    MrCoreDumped
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   <a href="/n/agentzh">
+    @agentzh
+   </a>
+   学习研究了春哥的扩展，春哥对内存的态度和nginx保持高度一致啊。。。连几个位都省[偷笑]
+  </span>
+  <span class="cmt">
+   赞[0]
+  </span>
+  <span class="cmt">
+   原文转发[3]
+  </span>
+  <a href="http://weibo.cn/comment/CgTZmDPMa?rl=0#cmtfrm" class="cc">
+   原文评论[0]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  必须保持高度一致啊，呵呵。
+  <a href="http://weibo.cn/attitude/ChaADqkhn/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[6]
+  </a>
+  <a href="http://weibo.cn/repost/ChaADqkhn?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/ChaADqkhn?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/ChaADqkhn?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月10日 12:07 来自iPhone 5s
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CgSH4cRvg"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   回国三周以来都没有看一眼我的 gmail 信箱，结果发现 inbox 积压了 300 封未读，绝大部分都是来自 OpenResty 用户和协作开发者的，有来自 GitHub issues 的，有来自 OpenResty 中英文邮件列表的，还有不少直接发到我信箱的。在家奋战了两天，终于把几乎所有新邮件都处理和回复完了。真辛苦。
+  </span>
+  <a href="http://weibo.cn/attitude/CgSH4cRvg/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[14]
+  </a>
+  <a href="http://weibo.cn/repost/CgSH4cRvg?uid=1834459124&amp;rl=0">
+   转发[8]
+  </a>
+  <a href="http://weibo.cn/comment/CgSH4cRvg?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CgSH4cRvg?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月08日 14:33 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CgieKrM8f"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   最近尝试把我的 LZSQL 编译器中使用的 Moose 这款 Perl 面向对象框架替换为比较轻量级的 Moo 框架，同时迁移到了 Type::Tiny 这款轻量级的类型约束框架。测试显示编译器整体有了 40% ~ 50% 的性能提升。以后在基于 Perl 实现的编译器中就都沿用 Pegex + Moo + Type::Tiny 组合了。貌似 Mo 还更轻一些。
+  </span>
+  <a href="http://weibo.cn/attitude/CgieKrM8f/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[11]
+  </a>
+  <a href="http://weibo.cn/repost/CgieKrM8f?uid=1834459124&amp;rl=0">
+   转发[3]
+  </a>
+  <a href="http://weibo.cn/comment/CgieKrM8f?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CgieKrM8f?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月04日 17:45 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CfX4fu5gY"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   我现在也模仿 Intel 让 OpenResty 采取类似 tick-tock 的发布模式。tock 发布则是升级官方的 nginx 核心到最新的主线版，tick 则是包含 OpenResty 自己的重要新特效和更动。前者的版本号一般是提高前三段数字，而后者则是提高第四段数字，很好辨别。下一个 OpenResty 发布将是 tick，即 1.7.10.2 版。
+  </span>
+  <span class="cmt">
+   赞[5]
+  </span>
+  <span class="cmt">
+   原文转发[7]
+  </span>
+  <a href="http://weibo.cn/comment/CfX304BeA?rl=0#cmtfrm" class="cc">
+   原文评论[1]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  这种发布策略可以保证较规律的发布周期，一般是 1 ～ 2 个月。很有节奏感，呵呵。
+  <a href="http://weibo.cn/attitude/CfX4fu5gY/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[3]
+  </a>
+  <a href="http://weibo.cn/repost/CfX4fu5gY?uid=1834459124&amp;rl=0">
+   转发[4]
+  </a>
+  <a href="http://weibo.cn/comment/CfX4fu5gY?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CfX4fu5gY?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月02日 11:51 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CfX304BeA"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   我现在也模仿 Intel 让 OpenResty 采取类似 tick-tock 的发布模式。tock 发布则是升级官方的 nginx 核心到最新的主线版，tick 则是包含 OpenResty 自己的重要新特效和更动。前者的版本号一般是提高前三段数字，而后者则是提高第四段数字，很好辨别。下一个 OpenResty 发布将是 tick，即 1.7.10.2 版。
+  </span>
+  <a href="http://weibo.cn/attitude/CfX304BeA/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/CfX304BeA?uid=1834459124&amp;rl=0">
+   转发[7]
+  </a>
+  <a href="http://weibo.cn/comment/CfX304BeA?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[1]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CfX304BeA?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月02日 11:48 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CfWQJakYj"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   最近在北京跟我的一位老朋友聊天，萌生了创建 OpenResty 软件基金会的想法，呵呵。这或许可以更好地支持和推动 OpenResty 社区的发展 [微笑] 希望日后有哥们给 OpenResty 提补丁，我也能给他发钱，嘿嘿。
+  </span>
+  <a href="http://weibo.cn/attitude/CfWQJakYj/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[30]
+  </a>
+  <a href="http://weibo.cn/repost/CfWQJakYj?uid=1834459124&amp;rl=0">
+   转发[11]
+  </a>
+  <a href="http://weibo.cn/comment/CfWQJakYj?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CfWQJakYj?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月02日 11:18 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CfWJqtKgd"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   啊，刚看到 Sony Digital Paper 又降价了，从 $999 降到 $799 了：
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRvFPgqT&amp;ep=CfWJqtKgd%2C1834459124%2CCfWJqtKgd%2C1834459124">
+    http://t.cn/RvFPgqT
+   </a>
+   有点后悔买早了，但想想这几个月已经在上面精读了好几本技术图书和很多源码，多花 $200 也很值了，呵呵。
+  </span>
+  <a href="http://weibo.cn/attitude/CfWJqtKgd/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[12]
+  </a>
+  <a href="http://weibo.cn/repost/CfWJqtKgd?uid=1834459124&amp;rl=0">
+   转发[8]
+  </a>
+  <a href="http://weibo.cn/comment/CfWJqtKgd?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[26]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CfWJqtKgd?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月02日 11:00 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CfWn8sStc"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   回到国内，Google 被墙；翻墙不便，用回 Yahoo! [泪]
+  </span>
+  <a href="http://weibo.cn/attitude/CfWn8sStc/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[11]
+  </a>
+  <a href="http://weibo.cn/repost/CfWn8sStc?uid=1834459124&amp;rl=0">
+   转发[10]
+  </a>
+  <a href="http://weibo.cn/comment/CfWn8sStc?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[15]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CfWn8sStc?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月02日 10:05 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+<div class="c" id="M_CfRbOF81G"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   在国内的这些日子把 Robert Love 的“Linux System Programming”一书在 Sony Digital Paper 上面精读完了。虽然大部分内容是我熟知的，但还是有不少特定于 Linux 和 glibc 的接口和行为细节是我第一次看到，非常欣喜，因为在日常工作中可以很好地利用上。和 Robert 的内核书一样，是深度有限的概览。
+  </span>
+  <a href="http://weibo.cn/attitude/CfRbOF81G/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[17]
+  </a>
+  <a href="http://weibo.cn/repost/CfRbOF81G?uid=1834459124&amp;rl=0">
+   转发[16]
+  </a>
+  <a href="http://weibo.cn/comment/CfRbOF81G?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[4]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CfRbOF81G?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   05月01日 20:53 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CeKP9BARW"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/zhanghusz">
+    Tiger_张虎
+   </a>
+   <img src="http://u1.sinaimg.cn/upload/2011/07/28/5338.gif" alt="V">
+   的微博:
+  </span>
+  <span class="ctt">
+   <a href="/n/agentzh">
+    @agentzh
+   </a>
+   演讲非常精彩 [位置]
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRAYsi6x&amp;ep=CeKP9BARW%2C1834459124%2CCeJ0a7UhW%2C2255454164">
+    北四环中路辅路
+   </a>
+  </span>
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CeJ0a7UhW?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/866f7fd4jw1ergfs280c9j20f00qoq3g.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CeJ0a7UhW&amp;u=866f7fd4jw1ergfs280c9j20f00qoq3g">
+   原图
+  </a>
+  <span class="cmt">
+   赞[2]
+  </span>
+  <span class="cmt">
+   原文转发[6]
+  </span>
+  <a href="http://weibo.cn/comment/CeJ0a7UhW?rl=0#cmtfrm" class="cc">
+   原文评论[2]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  谢谢！还是脱离幻灯片自由发挥比较痛快 [嘻嘻]
+  <a href="http://weibo.cn/attitude/CeKP9BARW/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[9]
+  </a>
+  <a href="http://weibo.cn/repost/CeKP9BARW?uid=1834459124&amp;rl=0">
+   转发[5]
+  </a>
+  <a href="http://weibo.cn/comment/CeKP9BARW?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[12]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CeKP9BARW?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月24日 14:51 来自iPhone 5s
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cd8uObobN"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   我最近一直在为 CloudFlare 设计一门领域内小语言（DSL），用于表达 edge server 上的逻辑（或者说 CDN 等网关上的各种逻辑）。在应用场景上有些类似 Varnish 的 VCL，但要干净和优雅得多（至少我希望如此）。在设计上我吸收了多种不同语言的基因，比如 CLIPS, Prolog, Perl 6, PHP 等等。
+  </span>
+  <span class="cmt">
+   赞[18]
+  </span>
+  <span class="cmt">
+   原文转发[55]
+  </span>
+  <a href="http://weibo.cn/comment/Cd49Nah1Q?rl=0#cmtfrm" class="cc">
+   原文评论[19]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  回复
+  <a href="/n/%E6%B7%98%E5%8F%94%E5%BA%A6">
+   @淘叔度
+  </a>
+  :使用 DSL 的另一大好处是和具体的实现语言严格分离。这样 Edge 编译器既可以吐 Lua ，也可以直接吐机器指令，同时还能自己吐英语作文档，或者吐正反两方面的测试用例。机器可以更深地“理解”业务逻辑，从而可以做更多了不起的事情，看起来像魔法的事情。
+  <a href="http://weibo.cn/attitude/Cd8uObobN/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[3]
+  </a>
+  <a href="http://weibo.cn/repost/Cd8uObobN?uid=1834459124&amp;rl=0">
+   转发[7]
+  </a>
+  <a href="http://weibo.cn/comment/Cd8uObobN?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[3]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cd8uObobN?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月13日 23:26 来自
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Fdown.sina.cn%2Fsinaclient%2Fweibo%2Findex%2Fgsid%2F0%2Fmid%2F0">
+    iPhone客户端
+   </a>
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cd4yZ7uBm"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   我最近一直在为 CloudFlare 设计一门领域内小语言（DSL），用于表达 edge server 上的逻辑（或者说 CDN 等网关上的各种逻辑）。在应用场景上有些类似 Varnish 的 VCL，但要干净和优雅得多（至少我希望如此）。在设计上我吸收了多种不同语言的基因，比如 CLIPS, Prolog, Perl 6, PHP 等等。
+  </span>
+  <span class="cmt">
+   赞[18]
+  </span>
+  <span class="cmt">
+   原文转发[55]
+  </span>
+  <a href="http://weibo.cn/comment/Cd49Nah1Q?rl=0#cmtfrm" class="cc">
+   原文评论[19]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  是的，目标就是 CDN 客户可以自己在浏览器里编程、测试、乃至热推送代码到整个 CDN 网络，同时不牺牲安全性和性能。//
+  <a href="/n/timebxg">
+   @timebxg
+  </a>
+  : 期待，Edge Server 可编程的话，整张 CDN 网络用户也可以高度自定义了。//
+  <a href="/n/agentzh">
+   @agentzh
+  </a>
+  : 最终 Edge 语言也将成为开源的 OpenResty 软件包的标准组件，以便非我司客户也能享用。
+  <a href="http://weibo.cn/attitude/Cd4yZ7uBm/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[15]
+  </a>
+  <a href="http://weibo.cn/repost/Cd4yZ7uBm?uid=1834459124&amp;rl=0">
+   转发[7]
+  </a>
+  <a href="http://weibo.cn/comment/Cd4yZ7uBm?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cd4yZ7uBm?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月13日 13:25 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cd4i8gFHY"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   我最近一直在为 CloudFlare 设计一门领域内小语言（DSL），用于表达 edge server 上的逻辑（或者说 CDN 等网关上的各种逻辑）。在应用场景上有些类似 Varnish 的 VCL，但要干净和优雅得多（至少我希望如此）。在设计上我吸收了多种不同语言的基因，比如 CLIPS, Prolog, Perl 6, PHP 等等。
+  </span>
+  <span class="cmt">
+   赞[18]
+  </span>
+  <span class="cmt">
+   原文转发[55]
+  </span>
+  <a href="http://weibo.cn/comment/Cd49Nah1Q?rl=0#cmtfrm" class="cc">
+   原文评论[19]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  我最近都在忙着把我们现有的众多企业级客户的 edge 规则都移植到我的 Edge 语言。其中有 Nginx 配置、有 Varnish VCL 配置，还有手写的 Lua 代码。主要难度在于老代码都太凌乱和琐碎了。我已经完成了 80% 的手工移植。毕竟只有积累足够多的真实世界的样本，才有可能得到好的抽象，设计出好用的语言。
+  <a href="http://weibo.cn/attitude/Cd4i8gFHY/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[12]
+  </a>
+  <a href="http://weibo.cn/repost/Cd4i8gFHY?uid=1834459124&amp;rl=0">
+   转发[2]
+  </a>
+  <a href="http://weibo.cn/comment/Cd4i8gFHY?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[8]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cd4i8gFHY?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月13日 12:44 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cd4efqfsO"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   我最近一直在为 CloudFlare 设计一门领域内小语言（DSL），用于表达 edge server 上的逻辑（或者说 CDN 等网关上的各种逻辑）。在应用场景上有些类似 Varnish 的 VCL，但要干净和优雅得多（至少我希望如此）。在设计上我吸收了多种不同语言的基因，比如 CLIPS, Prolog, Perl 6, PHP 等等。
+  </span>
+  <span class="cmt">
+   赞[18]
+  </span>
+  <span class="cmt">
+   原文转发[55]
+  </span>
+  <a href="http://weibo.cn/comment/Cd49Nah1Q?rl=0#cmtfrm" class="cc">
+   原文评论[19]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  最终 Edge 语言也将成为开源的 OpenResty 软件包的标准组件，以便非我司客户也能享用。我对于 Edge 语言的一个更大的期望是还可以同时取代 modsecurity 的规则语言来描述 WAF 规则。当然，vcl2edge 和 modsec2edge 这样的源码转换工具也是必不可少的了。Edge 编译器将能做很多了不起的全局优化和调度。
+  <a href="http://weibo.cn/attitude/Cd4efqfsO/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[8]
+  </a>
+  <a href="http://weibo.cn/repost/Cd4efqfsO?uid=1834459124&amp;rl=0">
+   转发[26]
+  </a>
+  <a href="http://weibo.cn/comment/Cd4efqfsO?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[0]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cd4efqfsO?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月13日 12:34 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cd4c19llh"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   我最近一直在为 CloudFlare 设计一门领域内小语言（DSL），用于表达 edge server 上的逻辑（或者说 CDN 等网关上的各种逻辑）。在应用场景上有些类似 Varnish 的 VCL，但要干净和优雅得多（至少我希望如此）。在设计上我吸收了多种不同语言的基因，比如 CLIPS, Prolog, Perl 6, PHP 等等。
+  </span>
+  <span class="cmt">
+   赞[18]
+  </span>
+  <span class="cmt">
+   原文转发[55]
+  </span>
+  <a href="http://weibo.cn/comment/Cd49Nah1Q?rl=0#cmtfrm" class="cc">
+   原文评论[19]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  我把这门小语言命名为 Edge. 其编程范式融合了逻辑式、函数式和命令式。我努力让它们能协调为一个统一整体。Edge 编译器将首先生成针对 OpenResty 的高度优化的 Lua 代码。当然，我也打算添加自动生成英语或汉语描述的编译器后端。最终目标是让我们的客户可以自由使用它来扩展我司 Edge 服务器的功能。
+  <a href="http://weibo.cn/attitude/Cd4c19llh/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[9]
+  </a>
+  <a href="http://weibo.cn/repost/Cd4c19llh?uid=1834459124&amp;rl=0">
+   转发[4]
+  </a>
+  <a href="http://weibo.cn/comment/Cd4c19llh?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cd4c19llh?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月13日 12:28 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cd49Nah1Q"><div class="s"></div>
+ <div>
+  <span class="ctt">
+   我最近一直在为 CloudFlare 设计一门领域内小语言（DSL），用于表达 edge server 上的逻辑（或者说 CDN 等网关上的各种逻辑）。在应用场景上有些类似 Varnish 的 VCL，但要干净和优雅得多（至少我希望如此）。在设计上我吸收了多种不同语言的基因，比如 CLIPS, Prolog, Perl 6, PHP 等等。
+  </span>
+  <a href="http://weibo.cn/attitude/Cd49Nah1Q/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[18]
+  </a>
+  <a href="http://weibo.cn/repost/Cd49Nah1Q?uid=1834459124&amp;rl=0">
+   转发[55]
+  </a>
+  <a href="http://weibo.cn/comment/Cd49Nah1Q?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[19]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cd49Nah1Q?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月13日 12:23 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c" id="M_Cd0fo7IxN"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/segmentfault">
+    SegmentFault
+   </a>
+   <img src="http://u1.sinaimg.cn/upload/2011/07/28/5337.gif" alt="V">
+   的微博:
+  </span>
+  <span class="ctt">
+   <a href="http://weibo.cn/pages/100808topic?extparam=SegmentFault+D-Day&amp;from=feed">
+    #SegmentFault D-Day#
+   </a>
+   现在分享的嘉宾是
+   <a href="/n/UPYUN">
+    @UPYUN
+   </a>
+   系统开发工程师张聪，主题是《Using ngx_lua in UPYUN》，分享了其团队在由原来的 C 模块将业务逻辑迁移到 ngx_lua 这整个转换过程中的一些心得体会，以及在 NGINX 上基于 ngx_lua 的方面他们得出来的最佳实践方案。
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRwkOZBP&amp;ep=Cd0fo7IxN%2C1834459124%2CCcMtLpvwL%2C2036070420">
+    http://t.cn/RwkOZBP
+   </a>
+  </span>
+  [
+  <a href="http://weibo.cn/mblog/picAll/CcMtLpvwL?rl=1">
+   组图共3张
+  </a>
+  ]
+ </div>
+ <div>
+  <a href="http://weibo.cn/mblog/pic/CcMtLpvwL?rl=0">
+   <img src="http://ww3.sinaimg.cn/wap180/795bf814gw1er1np6wm1pj20zk0qogp3.jpg" alt="图片" class="ib">
+  </a>
+  <a href="http://weibo.cn/mblog/oripic?id=CcMtLpvwL&amp;u=795bf814gw1er1np6wm1pj20zk0qogp3">
+   原图
+  </a>
+  <span class="cmt">
+   赞[7]
+  </span>
+  <span class="cmt">
+   原文转发[66]
+  </span>
+  <a href="http://weibo.cn/comment/CcMtLpvwL?rl=0#cmtfrm" class="cc">
+   原文评论[7]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  //
+  <a href="/n/%E8%93%9D%E5%B0%8F%E7%81%B0%E5%A4%A7%E5%8F%94">
+   @蓝小灰大叔
+  </a>
+  :
+  <a href="/n/agentzh">
+   @agentzh
+  </a>
+  //
+  <a href="/n/SegmentFault">
+   @SegmentFault
+  </a>
+  :[赞]//
+  <a href="/n/UPYUN">
+   @UPYUN
+  </a>
+  : 讲稿在这里哦：
+  <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Ft.cn%2FRAabpFG&amp;ep=Cd0fo7IxN%2C1834459124%2CCd0fo7IxN%2C1834459124">
+   http://t.cn/RAabpFG
+  </a>
+  <a href="http://weibo.cn/attitude/Cd0fo7IxN/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[5]
+  </a>
+  <a href="http://weibo.cn/repost/Cd0fo7IxN?uid=1834459124&amp;rl=0">
+   转发[20]
+  </a>
+  <a href="http://weibo.cn/comment/Cd0fo7IxN?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[2]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/Cd0fo7IxN?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月13日 02:26 来自
+   <a href="http://weibo.cn/sinaurl?f=w&amp;u=http%3A%2F%2Fdown.sina.cn%2Fsinaclient%2Fweibo%2Findex%2Fgsid%2F0%2Fmid%2F0">
+    iPhone客户端
+   </a>
+  </span>
+ </div>
+</div>
+<div class="c" id="M_CbeaociE6"><div class="s"></div>
+ <div>
+  <span class="cmt">
+   转发了
+   <a href="http://weibo.cn/agentzh">
+    agentzh
+   </a>
+   的微博:
+  </span>
+  <span class="ctt">
+   为了和 Ingy dot Net 老师交流，不得不重新玩起 IRC，用 screen + irssi 挂在 agentzh.org 服务器上。Ingy 喜欢自称是“IRC citizen”，没办法。
+  </span>
+  <span class="cmt">
+   赞[4]
+  </span>
+  <span class="cmt">
+   原文转发[2]
+  </span>
+  <a href="http://weibo.cn/comment/CbdMGoZGg?rl=0#cmtfrm" class="cc">
+   原文评论[9]
+  </a>
+  <!---->
+ </div>
+ <div>
+  <span class="cmt">
+   转发理由:
+  </span>
+  Ingy 老师说要来湾区找我玩，或许我们可以借 Larry Wall 在 Mountain View 的家搞个 hackathon :)
+  <a href="http://weibo.cn/attitude/CbeaociE6/add?uid=1963116122&amp;rl=0&amp;st=0f108c">
+   赞[2]
+  </a>
+  <a href="http://weibo.cn/repost/CbeaociE6?uid=1834459124&amp;rl=0">
+   转发[1]
+  </a>
+  <a href="http://weibo.cn/comment/CbeaociE6?uid=1834459124&amp;rl=0#cmtfrm" class="cc">
+   评论[3]
+  </a>
+  <a href="http://weibo.cn/fav/addFav/CbeaociE6?rl=0&amp;st=0f108c">
+   收藏
+  </a>
+  <!---->
+  <span class="ct">
+   04月01日 10:11 来自微博 weibo.com
+  </span>
+ </div>
+</div>
+<div class="c">
+ 设置:
+ <a href="http://weibo.cn/account/customize/skin?tf=7_005&amp;st=0f108c">
+  皮肤
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pic?tf=7_006&amp;st=0f108c">
+  图片
+ </a>
+ .
+ <a href="http://weibo.cn/account/customize/pagesize?tf=7_007&amp;st=0f108c">
+  条数
+ </a>
+ .
+ <a href="http://weibo.cn/account/privacy/?tf=7_008&amp;st=0f108c">
+  隐私
+ </a>
+</div>
+<div class="c">
+ 彩版|
+ <a href="http://m.weibo.cn/?tf=7_010">
+  触屏
+ </a>
+ |
+ <a href="http://weibo.cn/page/521?tf=7_011">
+  语音
+ </a>
+</div>
+</body></html>
