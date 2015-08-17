@@ -111,6 +111,7 @@ int main( int argc, char* argv[] ) {
        for (SizeType i = 0; i < a.Size(); i++) // rapidjson uses SizeType instead of size_t.
        {
           stringstream userIdSs;
+          stringstream commentSs;
           std::cout << i << "\n";
           userIdSs <<  a[i]["children"][0]["children"][0]["alt"].GetString();
           std::cout << userIdSs.str() << "\n";
@@ -121,31 +122,41 @@ int main( int argc, char* argv[] ) {
           int dtTagPos = 3;
           if ( shortCommentOnlystr != "p" )
           {
-             std::cout <<  a[i]["children"][2]["children"][1]["children"][0]["text"].GetString() << "\n";
-             std::cout << a[i]["children"][2]["children"][2]["children"][0]["text"].GetString() << "\n";
+             //std::cout <<  a[i]["children"][2]["children"][1]["children"][0]["text"].GetString() << "\n";
+             commentSs << a[i]["children"][2]["children"][2]["children"][0]["text"].GetString() << "\n";
           }
           else
-         {
-             std::cout <<  a[i]["children"][2]["children"][1]["text"].GetString() << "\n";
+          {
+             commentSs <<  a[i]["children"][2]["children"][1]["text"].GetString() << "\n";
              dtTagPos = 2;
-             
-         }
 
+          }
           //the position of the first picture depends on if the customer add favorite dish or not
           string dtTagStr = a[i]["children"][2]["children"][dtTagPos]["children"][0]["tag"].GetString();
           stringstream picLinkSs;
+          string imgTagStr = "";
           if ( dtTagStr == "dt" )
           {
-             //std::cout <<"get a dt!!!!!";
-             picLinkSs <<  a[i]["children"][2]["children"][dtTagPos+1]["children"][0]["children"][0]["href"].GetString();
+             dtTagPos++;
+          }
+
+          if ( a[i]["children"][2]["children"].Size() >  dtTagPos )
+          {
+             //if we want to extract all pics, need to count the array size 
+             std::cout << "<<<<<<" << a[i]["children"][2]["children"].Size();
+             imgTagStr = a[i]["children"][2]["children"][dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
+          }
+          if ( "img" == imgTagStr )
+          {
+             picLinkSs <<  a[i]["children"][2]["children"][dtTagPos]["children"][0]["children"][0]["href"].GetString();
           }
           else
-         {
-             picLinkSs  <<  a[i]["children"][2]["children"][dtTagPos]["children"][0]["children"][0]["href"].GetString();
+          {
+             //no picture, we won't put it into record
+             continue;
           }
           cout << picLinkSs.str();
           getPic( picLinkSs.str(), shopIdStr, userIdSs.str() );
-
        }
 
        /*
