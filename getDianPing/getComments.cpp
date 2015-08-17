@@ -154,15 +154,18 @@ int main( int argc, char* argv[] ) {
              dtTagPos++;
           }
 
-          if ( a[i]["children"][commentPos]["children"].Size() >  dtTagPos )
+          //move to the comment content branch of this tree
+          const Value& r = c["children"];
+          if ( r.Size() >  dtTagPos )
           {
              //if we want to extract all pics, need to count the array size 
-             std::cout << "<<<<<<" << a[i]["children"][commentPos]["children"].Size();
-             imgTagStr = a[i]["children"][commentPos]["children"][dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
+             std::cout << "\nTotally" << r.Size() << "pics\n";
+             //get img tag
+             imgTagStr = r[dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
           }
           if ( "img" == imgTagStr )
           {
-             picLinkSs <<  a[i]["children"][commentPos]["children"][dtTagPos]["children"][0]["children"][0]["href"].GetString();
+             picLinkSs <<  r[dtTagPos]["children"][0]["children"][0]["href"].GetString();
           }
           else
           {
