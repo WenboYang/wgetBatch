@@ -116,14 +116,23 @@ int main( int argc, char* argv[] ) {
           userIdSs <<  a[i]["children"][0]["children"][0]["alt"].GetString();
           std::cout << userIdSs.str() << "\n";
 
-          string shortCommentOnlystr;
-          shortCommentOnlystr =a[i]["children"][2]["children"][1]["tag"].GetString();
+          int commentPos = 2;
+          string isVipTagExistStr = a[i]["children"][1]["class"].GetString();
+          if ( "user-info" != isVipTagExistStr )
+          {
+             commentPos++;
+          }
+          std::cout << ">>>>>" << commentPos << "\n";
 
+
+          string shortCommentOnlystr;
           int dtTagPos = 3;
+          shortCommentOnlystr =a[i]["children"][commentPos]["children"][1]["tag"].GetString();
+
           if ( shortCommentOnlystr != "p" )
           {
              //std::cout <<  a[i]["children"][2]["children"][1]["children"][0]["text"].GetString() << "\n";
-             commentSs << a[i]["children"][2]["children"][2]["children"][0]["text"].GetString() << "\n";
+             commentSs << a[i]["children"][commentPos]["children"][2]["children"][0]["text"].GetString() << "\n";
           }
           else
           {
@@ -131,8 +140,9 @@ int main( int argc, char* argv[] ) {
              dtTagPos = 2;
 
           }
+          cout << commentSs.str();
           //the position of the first picture depends on if the customer add favorite dish or not
-          string dtTagStr = a[i]["children"][2]["children"][dtTagPos]["children"][0]["tag"].GetString();
+          string dtTagStr = a[i]["children"][commentPos]["children"][dtTagPos]["children"][0]["tag"].GetString();
           stringstream picLinkSs;
           string imgTagStr = "";
           if ( dtTagStr == "dt" )
@@ -144,11 +154,11 @@ int main( int argc, char* argv[] ) {
           {
              //if we want to extract all pics, need to count the array size 
              std::cout << "<<<<<<" << a[i]["children"][2]["children"].Size();
-             imgTagStr = a[i]["children"][2]["children"][dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
+             imgTagStr = a[i]["children"][commentPos]["children"][dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
           }
           if ( "img" == imgTagStr )
           {
-             picLinkSs <<  a[i]["children"][2]["children"][dtTagPos]["children"][0]["children"][0]["href"].GetString();
+             picLinkSs <<  a[i]["children"][commentPos]["children"][dtTagPos]["children"][0]["children"][0]["href"].GetString();
           }
           else
           {
