@@ -28,11 +28,34 @@ std::string exec( const char* cmd) {
     return result;
 }
 
+
+void getPic( const string& url,
+            const string& shopIdString,
+            const string& userIdString )
+{
+   string filterStr = "\" | pup div.\"frame-inner\" img attr{src}";
+   std::string headStr = "curl \"www.dianping.com" ;
+
+   stringstream ss;
+   ss << headStr << url << filterStr;
+   string strBuf;
+   cout << ss.str();
+   //open the picture page, get picture link
+   strBuf = exec( ss.str().c_str() );
+   strBuf.erase( strBuf.size() - 1, 1 );
+   //now download the picture and rename it
+   //cout << strBuf;
+   ss.str("");
+   ss << "curl -o " << "samples/" << shopIdString << "_" << userIdString << ".jpg" << " \""<< strBuf << "\"";
+   cout << ss.str();
+   exec( ss.str().c_str() );
+}
+
 int main( int argc, char* argv[] ) {
 
     // Prepare reader and input stream.
     Reader reader;
-
+    string shopIdStr = argv[1];
 
     if ( argc < 2 )
     {
@@ -43,14 +66,13 @@ int main( int argc, char* argv[] ) {
 
 
     string filterStr = "\" | pup ul.\"comment-list\" json{}";
-    
     std::string headStr = "curl \"www.dianping.com/shop/" ;
-    headStr += argv[1];
+    headStr += shopIdStr;
     headStr += filterStr;
 
     std::ofstream resultFile;
     stringstream rss;
-    rss << "samples/" << argv[1] << ".txt";
+    rss << "samples/" << shopIdStr << ".txt";
     resultFile.open( rss.str().c_str() );
 
     Document document;  // Default template parameter uses UTF8 and MemoryPoolAllocator.
@@ -66,7 +88,7 @@ int main( int argc, char* argv[] ) {
           strBuf = strBuf.substr( 1, strBuf.size() - 2);
        }
 
-       std::cout << strBuf;
+       //std::cout << strBuf;
        resultFile << strBuf;
        resultFile.close();
 #if 1
@@ -88,8 +110,10 @@ int main( int argc, char* argv[] ) {
        assert(a.IsArray());
        for (SizeType i = 0; i < a.Size(); i++) // rapidjson uses SizeType instead of size_t.
        {
+          stringstream userIdSs;
           std::cout << i << "\n";
-          std::cout <<  a[i]["children"][0]["children"][0]["alt"].GetString() << "\n";
+          userIdSs <<  a[i]["children"][0]["children"][0]["alt"].GetString();
+          std::cout << userIdSs.str() << "\n";
 
           string shortCommentOnlystr;
           shortCommentOnlystr =a[i]["children"][2]["children"][1]["tag"].GetString();
@@ -109,17 +133,21 @@ int main( int argc, char* argv[] ) {
 
           //the position of the first picture depends on if the customer add favorite dish or not
           string dtTagStr = a[i]["children"][2]["children"][dtTagPos]["children"][0]["tag"].GetString();
+          stringstream picLinkSs;
           if ( dtTagStr == "dt" )
           {
              //std::cout <<"get a dt!!!!!";
-             std::cout <<  a[i]["children"][2]["children"][dtTagPos+1]["children"][0]["children"][0]["href"].GetString() << "\n";
+             picLinkSs <<  a[i]["children"][2]["children"][dtTagPos+1]["children"][0]["children"][0]["href"].GetString();
           }
           else
          {
-             std::cout <<  a[i]["children"][2]["children"][dtTagPos]["children"][0]["children"][0]["href"].GetString() << "\n";
+             picLinkSs  <<  a[i]["children"][2]["children"][dtTagPos]["children"][0]["children"][0]["href"].GetString();
           }
+          cout << picLinkSs.str();
+          getPic( picLinkSs.str(), shopIdStr, userIdSs.str() );
 
        }
+
        /*
        if ( !(a.Size()) )
        {
