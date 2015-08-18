@@ -40,23 +40,26 @@ int main( int argc, char* argv[] ) {
 
     // Prepare reader and input stream.
     Reader reader;
-    string areaStr = argv[1];
+    string firstPageLinkStr;
+    string nameStr;
 
-    if ( argc < 2 )
+    if ( argc < 3 )
     {
-       cout << "usage: getFriends tokenstring";
+       std::cout << "usage: \"link of first page\" \"area name\"";
        return 0;
-       
     }
 
+    firstPageLinkStr = argv[1];
+    nameStr = argv[2];
+
     ofstream lutFs;
-    stringstream namess;
-    namess << "samples/lookUpTable.txt";
-    lutFs.open( namess.str().c_str() );
+    stringstream ss;
+    ss << "samples/" << nameStr << "Index.txt";
+    lutFs.open( ss.str().c_str() );
     for ( int i = 1; i < 6; i++ )
     {
        stringstream ss;
-       ss << "curl \"" << areaStr << "p" << i << "\" | pup a.\"o-map\" json{}";
+       ss << "curl -s \"" << firstPageLinkStr << "p" << i << "\" | pup a.\"o-map\" json{}";
        Document document;  // Default template parameter uses UTF8 and MemoryPoolAllocator.
        string strBuf;
        strBuf = exec( ss.str().c_str() );
@@ -89,17 +92,33 @@ int main( int argc, char* argv[] ) {
        cout << "parsed" << a.Size() << "shops";
        for (SizeType i = 0; i < a.Size(); i++) // rapidjson uses SizeType instead of size_t.
        {
-          stringstream idss;
-          stringstream namess;
-          idss <<  a[i]["data-shopid"].GetString();
-          namess <<  a[i]["data-sname"].GetString();
-          cout << "now getting" << idss.str() << namess.str() << "\n";
-          stringstream cmdss;
-          cmdss << "./getComments " << idss.str();
-          cout << cmdss.str() << "\n";
+          stringstream idSs;
+          stringstream nameSs;
+          stringstream addrSs; 
+          stringstream cmdSs;
+
+          idSs   << a[i]["data-shopid"].GetString();
+          nameSs << a[i]["data-sname"].GetString();
+          addrSs << a[i]["data-address"].GetString();
+
+          cmdSs << "python decode.py " << a[i]["data-poi"].GetString();
+          string gpsStr = exec( cmdSs.str().c_str() );
+
+          lutFs << "\n{\n" 
+                << "   id   : " << idSs.str() << ",\n"
+                << "   name : " << nameSs.str() << ",\n"
+                << "   addr : " << addrSs.str() << ",\n"
+                << "   gps  : " << gpsStr
+                << "\n},";
+
+          exec( cmdSs.str().c_str() );
+
+          cout << "Getting " << idSs.str() << " " << nameSs.str() << "...\n";
+          cmdSs.str("");
+          cmdSs << "./getComments " << idSs.str() << " " << nameStr;
+          cout << cmdSs.str() << "\n";
           sleep(3);
-          //exec( cmdss.str().c_str() );
-          lutFs << namess.str() << ":" << idss.str() << "\n";
+          exec( cmdSs.str().c_str() );
        }
     }
     lutFs.close();

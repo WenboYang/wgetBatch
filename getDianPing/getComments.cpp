@@ -31,23 +31,26 @@ std::string exec( const char* cmd) {
 
 void getPic( const string& url,
             const string& shopIdString,
-            const string& userIdString )
+            const string& userIdString,
+            ofstream& outFs )
 {
    string filterStr = "\" | pup div.\"frame-inner\" img attr{src}";
-   std::string headStr = "curl \"www.dianping.com" ;
+   std::string headStr = "curl -s \"www.dianping.com" ;
 
    stringstream ss;
    ss << headStr << url << filterStr;
    string strBuf;
-   cout << ss.str();
+   //cout << ss.str();
    //open the picture page, get picture link
    strBuf = exec( ss.str().c_str() );
    strBuf.erase( strBuf.size() - 1, 1 );
    //now download the picture and rename it
    //cout << strBuf;
    ss.str("");
-   ss << "curl -o " << "samples/" << shopIdString << "_" << userIdString << ".jpg" << " \""<< strBuf << "\"";
-   cout << ss.str();
+   ss << "curl -s -o " << "samples/" << shopIdString << "_" << userIdString << ".jpg" << " \""<< strBuf << "\"";
+
+   outFs << "   pic_link : ";
+   outFs << "samples/" << shopIdString << "_" << userIdString << ".jpg\n";
    exec( ss.str().c_str() );
 }
 
@@ -57,16 +60,17 @@ int main( int argc, char* argv[] ) {
     Reader reader;
     string shopIdStr = argv[1];
 
-    if ( argc < 2 )
+    if ( argc < 3 )
     {
-       cout << "usage: getFriends tokenstring";
+       cout << "usage: shopIdString, resultfile";
        return 0;
        
     }
-
+    ofstream outFs;
+    outFs.open( argv[2], std::ios_base::app );
 
     string filterStr = "\" | pup ul.\"comment-list\" json{}";
-    std::string headStr = "curl \"www.dianping.com/shop/" ;
+    std::string headStr = "curl -s \"www.dianping.com/shop/" ;
     headStr += shopIdStr;
     headStr += filterStr;
 
@@ -80,7 +84,7 @@ int main( int argc, char* argv[] ) {
     {
        stringstream ss;
        ss << headStr;
-       std::cout << ss.str();
+       //std::cout << ss.str();
        //fetch web page from server
        strBuf = exec( ss.str().c_str() );
        if ( strBuf.size() > 2 )
@@ -112,9 +116,14 @@ int main( int argc, char* argv[] ) {
        {
           stringstream userIdSs;
           stringstream commentSs;
-          std::cout << i << "\n";
+          //std::cout << i << "\n";
           userIdSs <<  a[i]["children"][0]["children"][0]["alt"].GetString();
-          std::cout << userIdSs.str() << "\n";
+
+          outFs << "\n{\n";
+          outFs << "   shopId   : ";
+          outFs << shopIdStr << ",\n";
+          outFs << "   user_id  : ";
+          outFs << userIdSs.str() << ",\n";
 
           int commentPos = 2;
           string isVipTagExistStr = a[i]["children"][1]["class"].GetString();
@@ -122,9 +131,7 @@ int main( int argc, char* argv[] ) {
           {
              commentPos++;
           }
-          std::cout << ">>>>>" << commentPos << "\n";
-
-
+          //std::cout << ">>>>>" << commentPos << "\n";
           string shortCommentOnlystr;
           int dtTagPos = 3;
 
@@ -144,7 +151,9 @@ int main( int argc, char* argv[] ) {
 
           }
 
-          cout << commentSs.str();
+          outFs << "   comments : ";
+          outFs << commentSs.str();
+          outFs << ",\n";
           //the position of the first picture depends on if the customer add favorite dish or not
           string dtTagStr = c["children"][dtTagPos]["children"][0]["tag"].GetString();
           stringstream picLinkSs;
@@ -172,8 +181,9 @@ int main( int argc, char* argv[] ) {
              //no picture, we won't put it into record
              continue;
           }
-          cout << picLinkSs.str();
-          getPic( picLinkSs.str(), shopIdStr, userIdSs.str() );
+          //cout << picLinkSs.str();
+          getPic( picLinkSs.str(), shopIdStr, userIdSs.str(), outFs );
+          outFs << "\n},\n";
        }
 
        /*
@@ -186,5 +196,7 @@ int main( int argc, char* argv[] ) {
        //cout << totalNumber << '\n';
        //cout.flush();
     }
+
+    outFs.close();
     return 0;
 }
