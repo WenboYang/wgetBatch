@@ -1,5 +1,35 @@
-// Hello World example
-// This example shows basic usage of DOM-style API.
+/***************************************************************************//**
+* @file 
+*     This file implements a command line version dianping shop comments 
+*     extraction routine, based on curl, pup and rapidjson. 
+*
+* Input 
+*     Shop ID and name of the task, something like Lujiazui, which will be 
+*     used to locate the folder to save the extracted comments and pictures.
+*  
+* Output:
+*     For now, only check the first page of a ceratin shop, and only grab 1 
+*     picture with 1 piece of comment from each user.  
+*  
+*     The result will be appended into the record file, in JSON format, like
+*     this:
+*
+*     {
+*       "shopId"   : "564313",
+*       "user_id"  : "Chestnut_Baby",
+*       "comments" : "由于之前比较喜欢黑方，这次麻麻过生日又定了黑方...
+*       "pic_link" : "samples/564313_Chestnut_Baby.jpg"
+*     }
+*
+*     Each "pic_link"  points to a picture saved in the /sample subfoler, 
+*
+* @note
+*     Only works for restaurants, not for hotels.
+*
+* @warning 
+*     None.
+*******************************************************************************
+*/
 
 #include "rapidjson/document.h"     // rapidjson's DOM-style API
 #include "rapidjson/prettywriter.h" // for stringify JSON
