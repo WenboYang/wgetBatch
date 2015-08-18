@@ -162,11 +162,11 @@ int main( int argc, char* argv[] ) {
 
           if ( shortCommentOnlystr != "p" )
           {
-             commentSs << c["children"][2]["children"][0]["text"].GetString() << "\n";
+             commentSs << c["children"][2]["children"][0]["text"].GetString();
           }
           else
           {
-             commentSs << c["children"][1]["text"].GetString() << "\n";
+             commentSs << c["children"][1]["text"].GetString();
              dtTagPos = 2;
 
           }
