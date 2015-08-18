@@ -43,6 +43,7 @@ int main( int argc, char* argv[] ) {
     string firstPageLinkStr;
     string nameStr;
 
+
     if ( argc < 3 )
     {
        std::cout << "usage: \"link of first page\" \"area name\"";
@@ -52,10 +53,15 @@ int main( int argc, char* argv[] ) {
     firstPageLinkStr = argv[1];
     nameStr = argv[2];
 
+    stringstream mkdirSs;
+    mkdirSs << "mkdir -p " << nameStr << "/sample";
+    exec( mkdirSs.str().c_str() );
+
     ofstream lutFs;
     stringstream ss;
-    ss << "samples/" << nameStr << "Index.txt";
+    ss << nameStr << "/" << nameStr << "Index.txt";
     lutFs.open( ss.str().c_str() );
+    cout << ss.str().c_str();
     for ( int i = 1; i < 6; i++ )
     {
        stringstream ss;
@@ -105,12 +111,12 @@ int main( int argc, char* argv[] ) {
           string gpsStr = exec( cmdSs.str().c_str() );
 
           lutFs << "\n{\n" 
-                << "   id   : " << idSs.str() << ",\n"
-                << "   name : " << nameSs.str() << ",\n"
-                << "   addr : " << addrSs.str() << ",\n"
-                << "   gps  : " << gpsStr
-                << "\n},";
-
+                << "   \"id\"   : " << "\"" << idSs.str()   << "\"" << ",\n"
+                << "   \"name\" : " << "\"" << nameSs.str() << "\"" << ",\n"
+                << "   \"addr\" : " << "\"" << addrSs.str() << "\"" << ",\n"
+                << "   \"gps\"  : " << gpsStr
+                << "},";
+          lutFs.flush();
           exec( cmdSs.str().c_str() );
 
           cout << "Getting " << idSs.str() << " " << nameSs.str() << "...\n";

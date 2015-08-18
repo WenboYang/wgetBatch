@@ -3,6 +3,7 @@
 # 鲲鹏数据 http://www.site-digger.com  
 
 import sys,os
+import json
   
 def to_base36(value):  
     """将10进制整数转换为36进制字符串 
@@ -56,7 +57,7 @@ def decode(C):
     L = (A + F - int(G)) / 2  
     K = float(F - L) / 100000  
     L = float(L) / 100000  
-    return {'lat': K, 'lng': L}  
+    return { "lat": K, "lng": L}  
   
 if __name__ == '__main__':  
-    print decode(sys.argv[1])  
+    print json.dumps(decode(sys.argv[1]))

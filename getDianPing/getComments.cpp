@@ -29,6 +29,9 @@ std::string exec( const char* cmd) {
 }
 
 
+string pathStr;
+string samplePathStr;
+
 void getPic( const string& url,
             const string& shopIdString,
             const string& userIdString,
@@ -47,10 +50,20 @@ void getPic( const string& url,
    //now download the picture and rename it
    //cout << strBuf;
    ss.str("");
-   ss << "curl -s -o " << "samples/" << shopIdString << "_" << userIdString << ".jpg" << " \""<< strBuf << "\"";
 
-   outFs << "   pic_link : ";
-   outFs << "samples/" << shopIdString << "_" << userIdString << ".jpg\n";
+   ss << "curl -s -o \"" 
+      << samplePathStr
+      << shopIdString 
+      << "_" 
+      << userIdString 
+      << ".jpg\"" 
+      << " \""
+      << strBuf 
+      << "\"";
+   cout << ss.str().c_str();
+
+   outFs << "   \"pic_link\" : ";
+   outFs << "\"sample/" << shopIdString << "_" << userIdString << ".jpg\"\n";
    exec( ss.str().c_str() );
 }
 
@@ -59,6 +72,8 @@ int main( int argc, char* argv[] ) {
     // Prepare reader and input stream.
     Reader reader;
     string shopIdStr = argv[1];
+    string nameStr = argv[2];
+    ofstream outFs;
 
     if ( argc < 3 )
     {
@@ -66,17 +81,27 @@ int main( int argc, char* argv[] ) {
        return 0;
        
     }
-    ofstream outFs;
-    outFs.open( argv[2], std::ios_base::app );
+    //get working path
+    stringstream ss;
+    ss << nameStr << "/";
+    pathStr = ss.str().c_str();
+    ss << "sample/";
+    samplePathStr = ss.str().c_str();
 
+    //open record file for appending
+    string recordFileNameStr = pathStr + nameStr + ".txt";
+    outFs.open( recordFileNameStr.c_str(), std::ios_base::app );
+
+    //first command, download then extract comment
     string filterStr = "\" | pup ul.\"comment-list\" json{}";
     std::string headStr = "curl -s \"www.dianping.com/shop/" ;
     headStr += shopIdStr;
     headStr += filterStr;
 
+    //save this into each shop's json record files
     std::ofstream resultFile;
     stringstream rss;
-    rss << "samples/" << shopIdStr << ".txt";
+    rss << samplePathStr.c_str() << nameStr << shopIdStr << ".txt";
     resultFile.open( rss.str().c_str() );
 
     Document document;  // Default template parameter uses UTF8 and MemoryPoolAllocator.
@@ -119,11 +144,6 @@ int main( int argc, char* argv[] ) {
           //std::cout << i << "\n";
           userIdSs <<  a[i]["children"][0]["children"][0]["alt"].GetString();
 
-          outFs << "\n{\n";
-          outFs << "   shopId   : ";
-          outFs << shopIdStr << ",\n";
-          outFs << "   user_id  : ";
-          outFs << userIdSs.str() << ",\n";
 
           int commentPos = 2;
           string isVipTagExistStr = a[i]["children"][1]["class"].GetString();
@@ -151,9 +171,6 @@ int main( int argc, char* argv[] ) {
 
           }
 
-          outFs << "   comments : ";
-          outFs << commentSs.str();
-          outFs << ",\n";
           //the position of the first picture depends on if the customer add favorite dish or not
           string dtTagStr = c["children"][dtTagPos]["children"][0]["tag"].GetString();
           stringstream picLinkSs;
@@ -181,6 +198,17 @@ int main( int argc, char* argv[] ) {
              //no picture, we won't put it into record
              continue;
           }
+
+          //Only put the comment into record file if it contains picture link
+          outFs << "\n{\n";
+          outFs << "   \"shopId\"   : ";
+          outFs << "\"" << shopIdStr << "\"" << ",\n";
+          outFs << "   \"user_id\"  : ";
+          outFs << "\"" << userIdSs.str() << "\"" << ",\n";
+
+          outFs << "   \"comments\" : ";
+          outFs << "\"" << commentSs.str() << "\"";
+          outFs << ",\n";
           //cout << picLinkSs.str();
           getPic( picLinkSs.str(), shopIdStr, userIdSs.str(), outFs );
           outFs << "\n},\n";
