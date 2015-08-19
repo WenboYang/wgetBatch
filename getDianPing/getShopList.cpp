@@ -142,7 +142,7 @@ int main( int argc, char* argv[] ) {
 
           cout << "Getting " << idSs.str() << " " << nameSs.str() << "...\n";
           cmdSs.str("");
-          cmdSs << "./getComments " << idSs.str() << " " << nameStr;
+          cmdSs << "./getJapanComments " << idSs.str() << " " << nameStr;
           cout << cmdSs.str() << "\n";
           sleep(3);
           exec( cmdSs.str().c_str() );

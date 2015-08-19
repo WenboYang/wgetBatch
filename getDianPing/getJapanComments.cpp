@@ -97,6 +97,89 @@ void getPic( const string& url,
    exec( ss.str().c_str() );
 }
 
+
+void ExtractCommentAndPic( const Value& a, string& shopIdStr, ofstream& outFs )
+{
+   for (SizeType i = 0; i < a.Size(); i++) // rapidjson uses SizeType instead of size_t.
+   {
+      stringstream userIdSs;
+      stringstream commentSs;
+      std::cout << i << "\n";
+      userIdSs <<  a[i]["children"][0]["children"][0]["alt"].GetString();
+      cout << userIdSs.str().c_str();
+      cout.flush();
+
+
+      int commentPos = 2;
+      string isVipTagExistStr = a[i]["children"][1]["class"].GetString();
+      if ( "user-info" != isVipTagExistStr )
+      {
+         commentPos++;
+      }
+      //std::cout << ">>>>>" << commentPos << "\n";
+      string shortCommentOnlystr;
+      int dtTagPos = 3;
+
+      //move to the comment content branch of this tree
+      const Value& c = a[i]["children"][commentPos];
+
+      shortCommentOnlystr = c["children"][1]["tag"].GetString();
+
+      if ( shortCommentOnlystr != "p" )
+      {
+         commentSs << c["children"][2]["children"][0]["text"].GetString();
+      }
+      else
+      {
+         commentSs << c["children"][1]["text"].GetString();
+         dtTagPos = 2;
+
+      }
+
+      //the position of the first picture depends on if the customer add favorite dish or not
+      string dtTagStr = c["children"][dtTagPos]["children"][0]["tag"].GetString();
+      stringstream picLinkSs;
+      string imgTagStr = "";
+      if ( dtTagStr == "dt" )
+      {
+         dtTagPos++;
+      }
+
+      //move to the comment content branch of this tree
+      const Value& r = c["children"];
+      if ( r.Size() >  dtTagPos )
+      {
+         //if we want to extract all pics, need to count the array size 
+         std::cout << "\nTotally" << r.Size() << "pics\n";
+         //get img tag
+         imgTagStr = r[dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
+      }
+      if ( "img" == imgTagStr )
+      {
+         picLinkSs <<  r[dtTagPos]["children"][0]["children"][0]["href"].GetString();
+      }
+      else
+      {
+         //no picture, we won't put it into record
+         continue;
+      }
+
+      //Only put the comment into record file if it contains picture link
+      outFs << "\n{\n";
+      outFs << "   \"shopId\"   : ";
+      outFs << "\"" << shopIdStr << "\"" << ",\n";
+      outFs << "   \"user_id\"  : ";
+      outFs << "\"" << userIdSs.str() << "\"" << ",\n";
+
+      outFs << "   \"comments\" : ";
+      outFs << "\"" << commentSs.str() << "\"";
+      outFs << ",\n";
+      //cout << picLinkSs.str();
+      getPic( picLinkSs.str(), shopIdStr, userIdSs.str(), outFs );
+      outFs << "\n},\n";
+   }
+}
+
 int main( int argc, char* argv[] ) {
 
     // Prepare reader and input stream.
@@ -167,87 +250,19 @@ int main( int argc, char* argv[] ) {
        assert(document.IsObject());    // Document is a JSON value represents the root of DOM. Root can be either an object or array.
        cout << "parsed";
        cout.flush();
-       const Value& a = document["children"][0]["children"][0]["children"];
-       assert(a.IsArray());
-       for (SizeType i = 0; i < a.Size(); i++) // rapidjson uses SizeType instead of size_t.
+       //const Value& a = document["children"][0]["children"][0]["children"];
+       const Value& b = document["children"];
+       assert(b.IsArray());
+
+       string tagStr =  b[0]["tag"].GetString();
+       if ( "div" == tagStr )
        {
-          stringstream userIdSs;
-          stringstream commentSs;
-          std::cout << i << "\n";
-          userIdSs <<  a[i]["children"][0]["children"][0]["alt"].GetString();
-          cout << userIdSs.str().c_str();
-          cout.flush();
-
-
-          int commentPos = 2;
-          string isVipTagExistStr = a[i]["children"][1]["class"].GetString();
-          if ( "user-info" != isVipTagExistStr )
-          {
-             commentPos++;
-          }
-          //std::cout << ">>>>>" << commentPos << "\n";
-          string shortCommentOnlystr;
-          int dtTagPos = 3;
-
-          //move to the comment content branch of this tree
-          const Value& c = a[i]["children"][commentPos];
-
-          shortCommentOnlystr = c["children"][1]["tag"].GetString();
-
-          if ( shortCommentOnlystr != "p" )
-          {
-             commentSs << c["children"][2]["children"][0]["text"].GetString();
-          }
-          else
-          {
-             commentSs << c["children"][1]["text"].GetString();
-             dtTagPos = 2;
-
-          }
-
-          //the position of the first picture depends on if the customer add favorite dish or not
-          string dtTagStr = c["children"][dtTagPos]["children"][0]["tag"].GetString();
-          stringstream picLinkSs;
-          string imgTagStr = "";
-          if ( dtTagStr == "dt" )
-          {
-             dtTagPos++;
-          }
-
-          //move to the comment content branch of this tree
-          const Value& r = c["children"];
-          if ( r.Size() >  dtTagPos )
-          {
-             //if we want to extract all pics, need to count the array size 
-             std::cout << "\nTotally" << r.Size() << "pics\n";
-             //get img tag
-             imgTagStr = r[dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
-          }
-          if ( "img" == imgTagStr )
-          {
-             picLinkSs <<  r[dtTagPos]["children"][0]["children"][0]["href"].GetString();
-          }
-          else
-          {
-             //no picture, we won't put it into record
-             continue;
-          }
-
-          //Only put the comment into record file if it contains picture link
-          outFs << "\n{\n";
-          outFs << "   \"shopId\"   : ";
-          outFs << "\"" << shopIdStr << "\"" << ",\n";
-          outFs << "   \"user_id\"  : ";
-          outFs << "\"" << userIdSs.str() << "\"" << ",\n";
-
-          outFs << "   \"comments\" : ";
-          outFs << "\"" << commentSs.str() << "\"";
-          outFs << ",\n";
-          //cout << picLinkSs.str();
-          getPic( picLinkSs.str(), shopIdStr, userIdSs.str(), outFs );
-          outFs << "\n},\n";
+          ExtractCommentAndPic( b[0]["children"][0]["children"], shopIdStr, outFs );
        }
-
+       else
+       {
+          ExtractCommentAndPic( b, shopIdStr, outFs );
+       }
        /*
        if ( !(a.Size()) )
        {
