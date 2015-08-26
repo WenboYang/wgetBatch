@@ -42,6 +42,14 @@
 #include "rapidjson/filewritestream.h"
 #include "rapidjson/error/en.h"
 
+#ifdef WINDOWS
+#include <direct.h>
+#define GetCurrentDir _getcwd
+#else
+#include <unistd.h>
+#define GetCurrentDir getcwd
+#endif
+
 using namespace rapidjson;
 using namespace std;
 
@@ -62,10 +70,12 @@ std::string exec( const char* cmd) {
 string pathStr;
 string samplePathStr;
 
+string cookieStr = " -H \"Host: www.dianping.com\" -H \"User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\" -H \"Accept-Language: en-US,en;q=0.5\" --compressed -H \"Referer: http://www.dianping.com/search/category/1/10/r808p2\" -H \"Cookie: showNav=#nav-tab|0|0; navCtgScroll=112; _hc.v=\"\"\\\"\"1d9f9bd4-09b0-4298-b8f3-2f1747eefebe.1439726970\\\"\"\"\"; cy=1; cye=shanghai; PHOENIX_ID=0a03034f-14f6a161742-1ce44b; JSESSIONID=DC1F3EE945D7875FA0FD113A494D0D30; aburl=1; s_ViewType=10\" -H \"Connection: keep-alive\" -H \"Cache-Control: max-age=0\"";
+
 void getPic( const string& url,
-            const string& shopIdString,
-            const string& userIdString,
-            ofstream& outFs )
+             const string& shopIdString,
+             const string& userIdString,
+             ofstream& outFs )
 {
    string filterStr = "\" | pup div.\"frame-inner\" img attr{src}";
    std::string headStr = "curl -s \"www.dianping.com" ;
@@ -90,15 +100,17 @@ void getPic( const string& url,
       << " \""
       << strBuf 
       << "\"";
+
    cout << ss.str().c_str();
 
    outFs << "   \"pic_link\" : ";
    outFs << "\"sample/" << shopIdString << "_" << userIdString << ".jpg\"\n";
+   sleep(1);
    exec( ss.str().c_str() );
 }
 
 
-void ExtractCommentAndPic( const Value& a, string& shopIdStr, ofstream& outFs )
+void ExtractCommentAndPic( const Value& a, string& shopIdStr, ofstream& outFs, bool isEndOfTable )
 {
    for (SizeType i = 0; i < a.Size(); i++) // rapidjson uses SizeType instead of size_t.
    {
@@ -133,9 +145,9 @@ void ExtractCommentAndPic( const Value& a, string& shopIdStr, ofstream& outFs )
       {
          commentSs << c["children"][1]["text"].GetString();
          dtTagPos = 2;
-
       }
 
+      cout << commentSs.str();
       //the position of the first picture depends on if the customer add favorite dish or not
       string dtTagStr = c["children"][dtTagPos]["children"][0]["tag"].GetString();
       stringstream picLinkSs;
@@ -150,13 +162,20 @@ void ExtractCommentAndPic( const Value& a, string& shopIdStr, ofstream& outFs )
       if ( r.Size() >  dtTagPos )
       {
          //if we want to extract all pics, need to count the array size 
+         cout << dtTagPos;
+         cout.flush();
          std::cout << "\nTotally" << r.Size() << "pics\n";
          //get img tag
-         imgTagStr = r[dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
+         imgTagStr = r[dtTagPos]["children"][0]["children"][0]["class"].GetString();
+//         imgTagStr = r[dtTagPos]["children"][0]["children"][0]["children"][0]["tag"].GetString();
+         cout << imgTagStr;
       }
-      if ( "img" == imgTagStr )
+      cout << "check if it's img";
+      if ( "item J-photo" == imgTagStr )
       {
+         cout << "is img!";
          picLinkSs <<  r[dtTagPos]["children"][0]["children"][0]["href"].GetString();
+         cout << picLinkSs.str();
       }
       else
       {
@@ -176,7 +195,17 @@ void ExtractCommentAndPic( const Value& a, string& shopIdStr, ofstream& outFs )
       outFs << ",\n";
       //cout << picLinkSs.str();
       getPic( picLinkSs.str(), shopIdStr, userIdSs.str(), outFs );
-      outFs << "\n},\n";
+      outFs << "\n}";
+
+      if( isEndOfTable && ( i + 1 ) == a.Size() )
+      {
+         cout << "end of comments";
+         outFs <<"\n";
+      }
+      else
+      {
+         outFs << ",\n";
+      }
    }
 }
 
@@ -192,7 +221,16 @@ int main( int argc, char* argv[] ) {
     {
        cout << "usage: shopIdString, resultfile";
        return 0;
-       
+    }
+
+    bool isEndOfTable = false;
+    if ( argc > 3 )
+    {
+       string isTailStr = argv[3];
+       if ( "tail" == isTailStr )
+       {
+          isEndOfTable = true;
+       }
     }
     //get working path
     stringstream ss;
@@ -207,7 +245,7 @@ int main( int argc, char* argv[] ) {
 
     //first command, download then extract comment
     string filterStr = "\" | pup ul.\"comment-list\" json{}";
-    std::string headStr = "curl -s \"www.dianping.com/shop/" ;
+    std::string headStr = " -s \"www.dianping.com/shop/" ;
     headStr += shopIdStr;
     headStr += filterStr;
 
@@ -219,10 +257,11 @@ int main( int argc, char* argv[] ) {
 
     Document document;  // Default template parameter uses UTF8 and MemoryPoolAllocator.
     string strBuf;
+
     {
        stringstream ss;
-       ss << headStr;
-       //std::cout << ss.str();
+       ss << "curl" << cookieStr << headStr;
+       std::cout << ss.str();
        //fetch web page from server
        strBuf = exec( ss.str().c_str() );
        if ( strBuf.size() > 2 )
@@ -257,14 +296,15 @@ int main( int argc, char* argv[] ) {
        string tagStr =  b[0]["tag"].GetString();
        if ( "div" == tagStr )
        {
-          ExtractCommentAndPic( b[0]["children"][0]["children"], shopIdStr, outFs );
+          ExtractCommentAndPic( b[0]["children"][0]["children"], shopIdStr, outFs, isEndOfTable );
        }
        else
        {
-          ExtractCommentAndPic( b, shopIdStr, outFs );
+          ExtractCommentAndPic( b, shopIdStr, outFs, isEndOfTable );
        }
+
        /*
-       if ( !(a.Size()) )
+       if ( !(a.Size()) 
        {
           break;
        }

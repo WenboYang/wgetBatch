@@ -57,6 +57,8 @@ std::string exec( const char* cmd) {
     return result;
 }
 
+string cookieStr = " -H \"Host: www.dianping.com\" -H \"User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\" -H \"Accept-Language: en-US,en;q=0.5\" --compressed -H \"Referer: http://www.dianping.com/search/category/1/10/r808p2\" -H \"Cookie: showNav=#nav-tab|0|0; navCtgScroll=112; _hc.v=\"\"\\\"\"1d9f9bd4-09b0-4298-b8f3-2f1747eefebe.1439726970\\\"\"\"\"; cy=1; cye=shanghai; PHOENIX_ID=0a03034f-14f6a161742-1ce44b; JSESSIONID=DC1F3EE945D7875FA0FD113A494D0D30; aburl=1; s_ViewType=10\" -H \"Connection: keep-alive\" -H \"Cache-Control: max-age=0\"";
+
 int main( int argc, char* argv[] ) {
 
     // Prepare reader and input stream.
@@ -82,11 +84,20 @@ int main( int argc, char* argv[] ) {
     stringstream ss;
     ss << nameStr << "/" << nameStr << "Index.txt";
     lutFs.open( ss.str().c_str() );
+    lutFs << "[\n";
+
+    ofstream outFs;
+    ss.str("");
+    ss << nameStr << "/" << nameStr << ".txt";
+    outFs.open( ss.str().c_str(), std::ios_base::app );
+    outFs << "[\n";
     cout << ss.str().c_str();
-    for ( int i = 1; i < 6; i++ )
+    outFs.close();
+
+    for ( int j = 1; j < 6; j++ )
     {
        stringstream ss;
-       ss << "curl -s \"" << firstPageLinkStr << "p" << i << "\" | pup a.\"o-map\" json{}";
+       ss << "curl -s \"" << firstPageLinkStr << "p" << j << "\"" << cookieStr.c_str() << " | pup a.\"o-map\" json{}";
        Document document;  // Default template parameter uses UTF8 and MemoryPoolAllocator.
        string strBuf;
        strBuf = exec( ss.str().c_str() );
@@ -136,18 +147,39 @@ int main( int argc, char* argv[] ) {
                 << "   \"name\" : " << "\"" << nameSs.str() << "\"" << ",\n"
                 << "   \"addr\" : " << "\"" << addrSs.str() << "\"" << ",\n"
                 << "   \"gps\"  : " << gpsStr
-                << "},";
-          lutFs.flush();
+                << "}";
           exec( cmdSs.str().c_str() );
 
           cout << "Getting " << idSs.str() << " " << nameSs.str() << "...\n";
           cmdSs.str("");
-          cmdSs << "./getJapanComments " << idSs.str() << " " << nameStr;
+          if ( j == 5 && (i+1) == a.Size() )
+          {
+             cmdSs << "./getJapanComments " << idSs.str() << " " << nameStr << " " << " tail ";
+          }
+          else
+          {
+             cmdSs << "./getJapanComments " << idSs.str() << " " << nameStr << " " << "content";
+             lutFs << ",";
+             lutFs.flush();
+          }
           cout << cmdSs.str() << "\n";
           sleep(3);
           exec( cmdSs.str().c_str() );
        }
     }
+    lutFs << "\n]";
     lutFs.close();
+
+    ss.str("");
+    ss << nameStr << "/" << nameStr << ".txt";
+    outFs.open( ss.str().c_str(), std::ios_base::app );
+    outFs << "\n]";
+    outFs.close();
+
+    stringstream cmdSs;
+    cmdSs << "mogrify -format jpg -gravity Center -crop 75x75%+0+0 ";
+    cmdSs << nameStr << "/";
+    cmdSs << "sample/*.jpg";
+    exec( cmdSs.str().c_str() );
     return 0;
 }
